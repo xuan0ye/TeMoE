@@ -1,0 +1,56 @@
+{
+  "cached_path": {
+    "per_sample": {
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": true,
+      "use_channels": false,
+      "params": 1459338,
+      "params_million": 1.4593,
+      "batch_size": 1,
+      "seq_len": 50,
+      "latency_ms_per_batch": 3.8123,
+      "throughput_samples_per_s": 262.31,
+      "flops_gflops": 0.0243
+    },
+    "per_batch32": {
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": true,
+      "use_channels": false,
+      "params": 1459338,
+      "params_million": 1.4593,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 5.1066,
+      "throughput_samples_per_s": 6266.41,
+      "flops_gflops": 0.7765
+    }
+  },
+  "cached_path_per_sample_ms": 3.8123,
+  "settings": {
+    "seq_len": 50,
+    "interp_dim": 384,
+    "d_model": 128,
+    "batch_size_small": 1,
+    "batch_size_large": 32
+  },
+  "online_path": {
+    "n_samples": 30,
+    "median_s": 1.351,
+    "mean_s": 1.339,
+    "min_s": 0.726,
+    "max_s": 1.768,
+    "fps": 1.0,
+    "max_frames": 8,
+    "max_pixels": 100352,
+    "max_new_tokens": 64
+  },
+  "speedup_online_over_cached": 354.4,
+  "cache_build": {
+    "n_clips": 22856,
+    "one_off_seconds": 30878.5,
+    "one_off_gpu_hours": 8.58,
+    "note": "one-off cost paid once offline; zero MLLM cost thereafter"
+  }
+}

@@ -1,0 +1,29 @@
+seed: 42
+
+data:
+  name: sims
+  # SIMS ships unaligned_39; the loader handles variable-length via padding already in the pkl
+  pkl: MSA Datasets/SIMS/Processed/unaligned_39.pkl
+  interpretation_dir: null
+
+model:
+  d_model: 128
+  n_heads: 4
+  num_experts: 8
+  top_k: 2
+  dropout: 0.1
+  use_mamba: true
+  use_interpretation: true
+
+training:
+  output_dir: outputs/mmsa/sims
+  # SIMS sentiment labels are in [-1, 1]; acc7 collapses to a 3-way score here.
+  label_range: [-1.0, 1.0]
+  epochs: 40
+  patience: 8
+  batch_size: 32
+  eval_batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  aux_loss_weight: 0.01
+  max_grad_norm: 1.0

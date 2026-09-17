@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-09-17T13:26:13.758197+00:00",
+  "status": "pass",
+  "checks": {
+    "manifest_entries": 91,
+    "payload_files": 91,
+    "json_files_parsed": 9,
+    "python_files_compiled": 54,
+    "text_files_scanned": 90,
+    "pytest_command": "python -m pytest -q -p no:cacheprovider mmsa/tests",
+    "pytest_exit_code": 0,
+    "pytest_output": "...                                                                  [100%]\n3 passed, 4 subtests passed in 4.95s\n"
+  },
+  "errors": []
+}

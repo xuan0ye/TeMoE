@@ -1,0 +1,10 @@
+| variant | temporal_backend | params_million | latency_ms_per_batch | throughput_samples_per_s | flops_gflops |
+| --- | --- | --- | --- | --- | --- |
+| backend=mamba | mamba | 1.2293 | 4.4376 | 7211.05 | 0.7754 |
+| backend=gru | bi-gru-fallback | 1.573 | 12.1035 | 2643.86 | 2.5861 |
+| top_k=1 | mamba | 1.2293 | 3.5585 | 8992.6 | 0.7713 |
+| top_k=2 | mamba | 1.2293 | 4.3993 | 7273.8 | 0.7754 |
+| top_k=4 | mamba | 1.2293 | 6.3398 | 5047.48 | 0.7838 |
+| top_k=8 | mamba | 1.2293 | 10.6462 | 3005.78 | 0.8006 |
+| interpretation=cached | mamba | 1.2293 | 3.8398 | 8333.76 | 0.7754 |
+| interpretation=off | mamba | 1.18 | 4.0959 | 7812.68 | 0.7723 |

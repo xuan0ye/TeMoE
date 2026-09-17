@@ -1,0 +1,454 @@
+{
+  "schema_version": 1,
+  "method": "paired two-one-sided t-tests (TOST), alpha=0.05, 90% t confidence interval",
+  "margin_policy": "Practical equivalence is 1% of the dataset label span: 0.06 MAE for MOSI/MOSEI and 0.02 MAE for CH-SIMS.",
+  "primary_margin_fraction_of_label_span": 0.01,
+  "families": {
+    "mosi_qwen7b_textonly_vs_matched": {
+      "temoe": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.015625309944152833,
+        "sd": 0.015911928730663546,
+        "se": 0.007116030858979125,
+        "margin": 0.06,
+        "lower_test_p": 0.00022191876491461926,
+        "upper_test_p": 0.0016846739700412245,
+        "tost_p": 0.0016846739700412245,
+        "ci90": [
+          0.000455022426036936,
+          0.03079559746226873
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.005054021910123673,
+        "equivalent_after_holm": true
+      },
+      "lmf": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.006876695156097412,
+        "sd": 0.02429729628388078,
+        "se": 0.01086608123204209,
+        "margin": 0.06,
+        "lower_test_p": 0.004054198997185399,
+        "upper_test_p": 0.0017680683130681827,
+        "tost_p": 0.004054198997185399,
+        "ci90": [
+          -0.030041515510590634,
+          0.01628812519839581
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.008108397994370797,
+        "equivalent_after_holm": true
+      },
+      "late_fusion": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.0033780813217163088,
+        "sd": 0.04262359808323423,
+        "se": 0.019061852551948293,
+        "margin": 0.06,
+        "lower_test_p": 0.020563360639815897,
+        "upper_test_p": 0.01462270416947134,
+        "tost_p": 0.020563360639815897,
+        "ci90": [
+          -0.044015030426019675,
+          0.03725886778258705
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.020563360639815897,
+        "equivalent_after_holm": true
+      }
+    },
+    "mosi_cliponly_vs_none": {
+      "temoe": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.023096156120300294,
+        "sd": 0.030955920110128585,
+        "se": 0.013843908334460057,
+        "margin": 0.06,
+        "lower_test_p": 0.028027914541780996,
+        "upper_test_p": 0.0019384694336676178,
+        "tost_p": 0.028027914541780996,
+        "ci90": [
+          -0.05260924761331964,
+          0.006416935372719059
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.028123005021483623,
+        "equivalent_after_holm": true
+      },
+      "lmf": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.010042965412139893,
+        "sd": 0.033177579572308886,
+        "se": 0.014837464650518214,
+        "margin": 0.06,
+        "lower_test_p": 0.004583477610549447,
+        "upper_test_p": 0.014061502510741812,
+        "tost_p": 0.014061502510741812,
+        "ci90": [
+          -0.02158823592030259,
+          0.041674166744582374
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.028123005021483623,
+        "equivalent_after_holm": true
+      },
+      "late_fusion": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.005411851406097412,
+        "sd": 0.028465028056168663,
+        "se": 0.012729947543006366,
+        "margin": 0.06,
+        "lower_test_p": 0.0063823401032921945,
+        "upper_test_p": 0.0033993525466973176,
+        "tost_p": 0.0063823401032921945,
+        "ci90": [
+          -0.03255014916576233,
+          0.0217264463535675
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.019147020309876583,
+        "equivalent_after_holm": true
+      }
+    },
+    "mosi_mispaired_vs_none": {
+      "temoe": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.012353098392486573,
+        "sd": 0.01750851910319625,
+        "se": 0.007830047780020093,
+        "margin": 0.06,
+        "lower_test_p": 0.001843454337199124,
+        "upper_test_p": 0.00038122427737618294,
+        "tost_p": 0.001843454337199124,
+        "ci90": [
+          -0.029045560589106505,
+          0.004339363804133358
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.001843454337199124,
+        "equivalent_after_holm": true
+      }
+    },
+    "mosi_architecture_choices_vs_full": {
+      "no_mamba": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.013783001899719238,
+        "sd": 0.016069357978889903,
+        "se": 0.00718643535911529,
+        "margin": 0.06,
+        "lower_test_p": 0.0015032039961788701,
+        "upper_test_p": 0.0002537293282626969,
+        "tost_p": 0.0015032039961788701,
+        "ci90": [
+          -0.029103381025193352,
+          0.001537377225754876
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.0031295668657209913,
+        "equivalent_after_holm": true
+      },
+      "ta_gated_conv_text": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.002618241310119629,
+        "sd": 0.0180898772751838,
+        "se": 0.008090039058387928,
+        "margin": 0.06,
+        "lower_test_p": 0.0007503687179317708,
+        "upper_test_p": 0.0010431889552403304,
+        "tost_p": 0.0010431889552403304,
+        "ci90": [
+          -0.01462848245776173,
+          0.019864965078000986
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.0031295668657209913,
+        "equivalent_after_holm": true
+      },
+      "dense_moe": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.017071461677551268,
+        "sd": 0.017357564698286327,
+        "se": 0.007762538917843771,
+        "margin": 0.06,
+        "lower_test_p": 0.0026118780099609884,
+        "upper_test_p": 0.0002889001291775469,
+        "tost_p": 0.0026118780099609884,
+        "ci90": [
+          -0.03362000532329204,
+          -0.0005229180318104994
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.0031295668657209913,
+        "equivalent_after_holm": true
+      }
+    },
+    "sims_architecture_choices_vs_full": {
+      "no_mamba": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.0029038369655609133,
+        "sd": 0.016409578384311146,
+        "se": 0.007338586549886178,
+        "margin": 0.02,
+        "lower_test_p": 0.04014248324216585,
+        "upper_test_p": 0.017745903497152854,
+        "tost_p": 0.04014248324216585,
+        "ci90": [
+          -0.018548579118115714,
+          0.01274090518699389
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.04014248324216585,
+        "equivalent_after_holm": true
+      },
+      "ta_gated_conv_text": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.004648131132125854,
+        "sd": 0.00693848970605634,
+        "se": 0.003102986928784902,
+        "margin": 0.02,
+        "lower_test_p": 0.0006800756369053085,
+        "upper_test_p": 0.0038876690717059913,
+        "tost_p": 0.0038876690717059913,
+        "ci90": [
+          -0.001966961580017831,
+          0.011263223844269539
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.011663007215117973,
+        "equivalent_after_holm": true
+      },
+      "dense_moe": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.0016775131225585938,
+        "sd": 0.01358651746815434,
+        "se": 0.006076075327256287,
+        "margin": 0.02,
+        "lower_test_p": 0.011712130223522799,
+        "upper_test_p": 0.019668186261078895,
+        "tost_p": 0.019668186261078895,
+        "ci90": [
+          -0.011275748537331352,
+          0.01463077478244854
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 0.03933637252215779,
+        "equivalent_after_holm": true
+      }
+    },
+    "mosei_architecture_choices_vs_full": {
+      "no_mamba": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.00146791934967041,
+        "sd": 0.003597187450073613,
+        "se": 0.0016087111332347458,
+        "margin": 0.06,
+        "lower_test_p": 1.4010671083308779e-06,
+        "upper_test_p": 1.703231860532534e-06,
+        "tost_p": 1.703231860532534e-06,
+        "ci90": [
+          -0.001961606309843981,
+          0.004897445009184801
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 5.109695581597602e-06,
+        "equivalent_after_holm": true
+      },
+      "ta_gated_conv_text": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 9.300708770751954e-05,
+        "sd": 0.0052517768347829655,
+        "se": 0.0023486660010466785,
+        "margin": 0.06,
+        "lower_test_p": 6.929481606965382e-06,
+        "upper_test_p": 7.015507047013425e-06,
+        "tost_p": 7.015507047013425e-06,
+        "ci90": [
+          -0.004913988978778499,
+          0.005100003154193538
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 1.403101409402685e-05,
+        "equivalent_after_holm": true
+      },
+      "dense_moe": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.0012336969375610352,
+        "sd": 0.005275084328176304,
+        "se": 0.0023590894289692048,
+        "margin": 0.06,
+        "lower_test_p": 6.544127880259154e-06,
+        "upper_test_p": 7.707862390663791e-06,
+        "tost_p": 7.707862390663791e-06,
+        "ci90": [
+          -0.0037955202802441284,
+          0.006262914155366199
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "holm_adjusted_tost_p": 1.403101409402685e-05,
+        "equivalent_after_holm": true
+      }
+    }
+  },
+  "sensitivity_mosi": {
+    "temoe": {
+      "qwen7b_textonly_vs_matched": {
+        "0.02": false,
+        "0.03": false,
+        "0.04": true,
+        "0.05": true,
+        "0.06": true
+      },
+      "cliponly_vs_none": {
+        "0.02": false,
+        "0.03": false,
+        "0.04": false,
+        "0.05": false,
+        "0.06": true
+      }
+    },
+    "lmf": {
+      "qwen7b_textonly_vs_matched": {
+        "0.02": false,
+        "0.03": false,
+        "0.04": true,
+        "0.05": true,
+        "0.06": true
+      },
+      "cliponly_vs_none": {
+        "0.02": false,
+        "0.03": false,
+        "0.04": false,
+        "0.05": true,
+        "0.06": true
+      }
+    },
+    "late_fusion": {
+      "qwen7b_textonly_vs_matched": {
+        "0.02": false,
+        "0.03": false,
+        "0.04": false,
+        "0.05": true,
+        "0.06": true
+      },
+      "cliponly_vs_none": {
+        "0.02": false,
+        "0.03": false,
+        "0.04": true,
+        "0.05": true,
+        "0.06": true
+      }
+    }
+  }
+}

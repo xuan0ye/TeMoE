@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "dataset": "mosi",
+  "question": "Does Qwen transcript rewriting add value beyond directly encoding the same raw transcript with the identical frozen sentence encoder?",
+  "difference_convention": "first condition MAE minus second condition MAE; negative is better",
+  "rows": {
+    "temoe": {
+      "rawtext": {
+        "mae": 0.8779687285423279,
+        "mae_std": 0.039223385531241085,
+        "corr": 0.7064002020684261,
+        "corr_std": 0.01905291871431583,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_rawtext/temoe/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_rawtext/temoe/multiseed_temoe.json"
+      },
+      "none": {
+        "mae": 0.9244559168815613,
+        "mae_std": 0.021767005967411532,
+        "corr": 0.6697771187677082,
+        "corr_std": 0.018636139605365133,
+        "acc7": 0.37142857142857144,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_nointerp/temoe/multiseed_temoe.json"
+      },
+      "textonly": {
+        "mae": 0.7189625978469849,
+        "mae_std": 0.00959440192846944,
+        "corr": 0.8239703432998583,
+        "corr_std": 0.003240255220613262,
+        "acc7": 0.4425655976676385,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/control_textonly/temoe/multiseed_temoe.json"
+      },
+      "matched": {
+        "mae": 0.703337287902832,
+        "mae_std": 0.01936951067871023,
+        "corr": 0.818776433279686,
+        "corr_std": 0.006778051780185719,
+        "acc7": 0.44839650145772597,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed/temoe/multiseed_temoe.json"
+      }
+    },
+    "lmf": {
+      "rawtext": {
+        "mae": 0.883593475818634,
+        "mae_std": 0.021570992558260425,
+        "corr": 0.7197147435944992,
+        "corr_std": 0.014710847276592179,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_rawtext/lmf/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_rawtext/lmf/multiseed_lmf.json"
+      },
+      "none": {
+        "mae": 0.9319561839103698,
+        "mae_std": 0.017277077584133056,
+        "corr": 0.6790034223608756,
+        "corr_std": 0.01066046921025292,
+        "acc7": 0.33615160349854223,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_nointerp/lmf/multiseed_lmf.json"
+      },
+      "textonly": {
+        "mae": 0.7040156245231628,
+        "mae_std": 0.010841381345753881,
+        "corr": 0.820704674276773,
+        "corr_std": 0.0027952600530578276,
+        "acc7": 0.44927113702623905,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/control_textonly/lmf/multiseed_lmf.json"
+      },
+      "matched": {
+        "mae": 0.7108923196792603,
+        "mae_std": 0.020188438044227965,
+        "corr": 0.8140608326869951,
+        "corr_std": 0.004239288161419011,
+        "acc7": 0.43002915451895046,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_interp/lmf/multiseed_lmf.json"
+      }
+    },
+    "late_fusion": {
+      "rawtext": {
+        "mae": 0.8874928236007691,
+        "mae_std": 0.02957428865624496,
+        "corr": 0.7168723249907873,
+        "corr_std": 0.010305533792864205,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_rawtext/late_fusion/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_rawtext/late_fusion/multiseed_late_fusion.json"
+      },
+      "none": {
+        "mae": 0.9273171663284302,
+        "mae_std": 0.02324177338641827,
+        "corr": 0.6821851847287943,
+        "corr_std": 0.007781452707807617,
+        "acc7": 0.339067055393586,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_nointerp/late_fusion/multiseed_late_fusion.json"
+      },
+      "textonly": {
+        "mae": 0.6986633896827698,
+        "mae_std": 0.014803700286336683,
+        "corr": 0.8250238880693115,
+        "corr_std": 0.0016503351089573659,
+        "acc7": 0.4501457725947522,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/control_textonly/late_fusion/multiseed_late_fusion.json"
+      },
+      "matched": {
+        "mae": 0.7020414710044861,
+        "mae_std": 0.03046210600907136,
+        "corr": 0.8236848818415925,
+        "corr_std": 0.0029687107297412065,
+        "acc7": 0.4530612244897959,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_interp/late_fusion/multiseed_late_fusion.json"
+      }
+    }
+  },
+  "paired_tests": {
+    "temoe": {
+      "rawtext_vs_none": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.0464871883392334,
+        "sd": 0.052700172560668876,
+        "se": 0.023568233654324953,
+        "lo": -0.0926809263017103,
+        "hi": -0.0002934503767564878,
+        "t": -1.972451097568894,
+        "p": 0.11983264260655058
+      },
+      "rawtext_vs_qwen_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.15900613069534303,
+        "sd": 0.04200663166077126,
+        "se": 0.018785936779855884,
+        "lo": 0.12218569460682549,
+        "hi": 0.19582656678386057,
+        "t": 8.464104428683319,
+        "p": 0.0010677180302772532
+      },
+      "rawtext_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.17463144063949584,
+        "sd": 0.04742285213413697,
+        "se": 0.021208144211770245,
+        "lo": 0.13306347798442617,
+        "hi": 0.21619940329456552,
+        "t": 8.234168859648628,
+        "p": 0.0011861296624942378
+      },
+      "qwen_textonly_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.015625309944152833,
+        "sd": 0.015911928730663546,
+        "se": 0.007116030858979125,
+        "lo": 0.0016778894605537463,
+        "hi": 0.02957273042775192,
+        "t": 2.1957900764913854,
+        "p": 0.09308867661108361
+      }
+    },
+    "lmf": {
+      "rawtext_vs_none": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.04836270809173584,
+        "sd": 0.027749354570395145,
+        "se": 0.012409888630229602,
+        "lo": -0.07268608980698586,
+        "hi": -0.024039326376485818,
+        "t": -3.8971105650318028,
+        "p": 0.017584406808987756
+      },
+      "rawtext_vs_qwen_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.17957785129547119,
+        "sd": 0.02529774973806641,
+        "se": 0.0113134976184188,
+        "lo": 0.15740339596337033,
+        "hi": 0.20175230662757204,
+        "t": 15.872885411060828,
+        "p": 9.207095104147182e-05
+      },
+      "rawtext_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.17270115613937378,
+        "sd": 0.0394118536801704,
+        "se": 0.017625516789627253,
+        "lo": 0.13815514323170436,
+        "hi": 0.2072471690470432,
+        "t": 9.798359855241788,
+        "p": 0.0006080887417240872
+      },
+      "qwen_textonly_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.006876695156097412,
+        "sd": 0.02429729628388078,
+        "se": 0.01086608123204209,
+        "lo": -0.028174214370899908,
+        "hi": 0.014420824058705085,
+        "t": -0.6328588024741886,
+        "p": 0.5611997503122617
+      }
+    },
+    "late_fusion": {
+      "rawtext_vs_none": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.03982434272766113,
+        "sd": 0.03732259845896247,
+        "se": 0.016691173450233795,
+        "lo": -0.07253904269011938,
+        "hi": -0.0071096427652028935,
+        "t": -2.385952242746798,
+        "p": 0.07549907627329852
+      },
+      "rawtext_vs_qwen_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.18882943391799928,
+        "sd": 0.040327720126003934,
+        "se": 0.018035104715866234,
+        "lo": 0.15348062867490148,
+        "hi": 0.22417823916109708,
+        "t": 10.47010465938011,
+        "p": 0.00047031283718275066
+      },
+      "rawtext_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.18545135259628295,
+        "sd": 0.014465697362452191,
+        "se": 0.006469256528876502,
+        "lo": 0.172771609799685,
+        "hi": 0.1981310953928809,
+        "t": 28.666563424791217,
+        "p": 8.813201011678926e-06
+      },
+      "qwen_textonly_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.0033780813217163088,
+        "sd": 0.04262359808323423,
+        "se": 0.019061852551948293,
+        "lo": -0.04073931232353496,
+        "hi": 0.03398314968010234,
+        "t": -0.17721684251361172,
+        "p": 0.8679498896557903
+      }
+    }
+  }
+}

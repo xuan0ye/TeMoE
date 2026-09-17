@@ -1,0 +1,116 @@
+{
+  "temoe": {
+    "matched": {
+      "mae": 0.703337287902832,
+      "mae_std": 0.01936951067871023,
+      "corr": 0.818776433279686,
+      "corr_std": 0.006778051780185719,
+      "acc7": 0.44839650145772597,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/multiseed/temoe/multiseed_temoe.json"
+    },
+    "videonly": {
+      "mae": 0.901359760761261,
+      "mae_std": 0.0318346770826862,
+      "corr": 0.6894734866998675,
+      "corr_std": 0.0014880070615572772,
+      "acc7": 0.3763848396501458,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/control_videonly/temoe/multiseed_temoe.json"
+    },
+    "textonly": {
+      "mae": 0.7189625978469849,
+      "mae_std": 0.00959440192846944,
+      "corr": 0.8239703432998583,
+      "corr_std": 0.003240255220613262,
+      "acc7": 0.4425655976676385,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/control_textonly/temoe/multiseed_temoe.json"
+    },
+    "none": {
+      "mae": 0.9244559168815613,
+      "mae_std": 0.021767005967411532,
+      "corr": 0.6697771187677082,
+      "corr_std": 0.018636139605365133,
+      "acc7": 0.37142857142857144,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/multiseed_nointerp/temoe/multiseed_temoe.json"
+    }
+  },
+  "lmf": {
+    "matched": {
+      "mae": 0.7108923196792603,
+      "mae_std": 0.020188438044227965,
+      "corr": 0.8140608326869951,
+      "corr_std": 0.004239288161419011,
+      "acc7": 0.43002915451895046,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/multiseed_interp/lmf/multiseed_lmf.json"
+    },
+    "videonly": {
+      "mae": 0.9419991493225097,
+      "mae_std": 0.024472052444991784,
+      "corr": 0.6758378033945511,
+      "corr_std": 0.008760463844887167,
+      "acc7": 0.3349854227405248,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/control_videonly/lmf/multiseed_lmf.json"
+    },
+    "textonly": {
+      "mae": 0.7040156245231628,
+      "mae_std": 0.010841381345753881,
+      "corr": 0.820704674276773,
+      "corr_std": 0.0027952600530578276,
+      "acc7": 0.44927113702623905,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/control_textonly/lmf/multiseed_lmf.json"
+    },
+    "none": {
+      "mae": 0.9319561839103698,
+      "mae_std": 0.017277077584133056,
+      "corr": 0.6790034223608756,
+      "corr_std": 0.01066046921025292,
+      "acc7": 0.33615160349854223,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/multiseed_nointerp/lmf/multiseed_lmf.json"
+    }
+  },
+  "late_fusion": {
+    "matched": {
+      "mae": 0.7020414710044861,
+      "mae_std": 0.03046210600907136,
+      "corr": 0.8236848818415925,
+      "corr_std": 0.0029687107297412065,
+      "acc7": 0.4530612244897959,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/multiseed_interp/late_fusion/multiseed_late_fusion.json"
+    },
+    "videonly": {
+      "mae": 0.9219053149223327,
+      "mae_std": 0.02058633982151013,
+      "corr": 0.6920683409070462,
+      "corr_std": 0.00958949345850932,
+      "acc7": 0.3425655976676385,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/control_videonly/late_fusion/multiseed_late_fusion.json"
+    },
+    "textonly": {
+      "mae": 0.6986633896827698,
+      "mae_std": 0.014803700286336683,
+      "corr": 0.8250238880693115,
+      "corr_std": 0.0016503351089573659,
+      "acc7": 0.4501457725947522,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/control_textonly/late_fusion/multiseed_late_fusion.json"
+    },
+    "none": {
+      "mae": 0.9273171663284302,
+      "mae_std": 0.02324177338641827,
+      "corr": 0.6821851847287943,
+      "corr_std": 0.007781452707807617,
+      "acc7": 0.339067055393586,
+      "n": 5,
+      "path": "outputs/mmsa/mosi/multiseed_nointerp/late_fusion/multiseed_late_fusion.json"
+    }
+  }
+}

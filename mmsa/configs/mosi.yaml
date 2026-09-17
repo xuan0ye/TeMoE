@@ -1,0 +1,28 @@
+seed: 42
+
+data:
+  name: mosi
+  pkl: MSA Datasets/MOSI/Processed/aligned_50.pkl
+  # set to a directory after running mmsa.data.precompute_interpretation; null disables MLLM branch
+  interpretation_dir: null
+
+model:
+  d_model: 128
+  n_heads: 4
+  num_experts: 8
+  top_k: 2
+  dropout: 0.1
+  use_mamba: true
+  use_interpretation: true
+
+training:
+  output_dir: outputs/mmsa/mosi
+  label_range: [-3.0, 3.0]
+  epochs: 40
+  patience: 8
+  batch_size: 32
+  eval_batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  aux_loss_weight: 0.01
+  max_grad_norm: 1.0

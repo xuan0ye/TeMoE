@@ -1,0 +1,521 @@
+{
+  "schema_version": 1,
+  "dataset": "mosi",
+  "question": "Can a cheaper 1.5B text-only teacher preserve the benefit of the 7B VL model used without video?",
+  "difference_convention": "first condition MAE minus second condition MAE; negative is better",
+  "rows": {
+    "temoe": {
+      "teacher_1p5b": {
+        "mae": 0.7807329773902894,
+        "mae_std": 0.02125298012272977,
+        "corr": 0.785096657022801,
+        "corr_std": 0.005361420114953866,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_text_teacher_1p5b/temoe/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_text_teacher_1p5b/temoe/multiseed_temoe.json"
+      },
+      "rawtext": {
+        "mae": 0.8779687285423279,
+        "mae_std": 0.039223385531241085,
+        "corr": 0.7064002020684261,
+        "corr_std": 0.01905291871431583,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_rawtext/temoe/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_rawtext/temoe/multiseed_temoe.json"
+      },
+      "none": {
+        "mae": 0.9244559168815613,
+        "mae_std": 0.021767005967411532,
+        "corr": 0.6697771187677082,
+        "corr_std": 0.018636139605365133,
+        "acc7": 0.37142857142857144,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_nointerp/temoe/multiseed_temoe.json"
+      },
+      "qwen7b_textonly": {
+        "mae": 0.7189625978469849,
+        "mae_std": 0.00959440192846944,
+        "corr": 0.8239703432998583,
+        "corr_std": 0.003240255220613262,
+        "acc7": 0.4425655976676385,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/control_textonly/temoe/multiseed_temoe.json"
+      },
+      "matched": {
+        "mae": 0.703337287902832,
+        "mae_std": 0.01936951067871023,
+        "corr": 0.818776433279686,
+        "corr_std": 0.006778051780185719,
+        "acc7": 0.44839650145772597,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed/temoe/multiseed_temoe.json"
+      }
+    },
+    "lmf": {
+      "teacher_1p5b": {
+        "mae": 0.8048488736152649,
+        "mae_std": 0.014473929139553147,
+        "corr": 0.7736134370836102,
+        "corr_std": 0.0024423365605392173,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_text_teacher_1p5b/lmf/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_text_teacher_1p5b/lmf/multiseed_lmf.json"
+      },
+      "rawtext": {
+        "mae": 0.883593475818634,
+        "mae_std": 0.021570992558260425,
+        "corr": 0.7197147435944992,
+        "corr_std": 0.014710847276592179,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_rawtext/lmf/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_rawtext/lmf/multiseed_lmf.json"
+      },
+      "none": {
+        "mae": 0.9319561839103698,
+        "mae_std": 0.017277077584133056,
+        "corr": 0.6790034223608756,
+        "corr_std": 0.01066046921025292,
+        "acc7": 0.33615160349854223,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_nointerp/lmf/multiseed_lmf.json"
+      },
+      "qwen7b_textonly": {
+        "mae": 0.7040156245231628,
+        "mae_std": 0.010841381345753881,
+        "corr": 0.820704674276773,
+        "corr_std": 0.0027952600530578276,
+        "acc7": 0.44927113702623905,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/control_textonly/lmf/multiseed_lmf.json"
+      },
+      "matched": {
+        "mae": 0.7108923196792603,
+        "mae_std": 0.020188438044227965,
+        "corr": 0.8140608326869951,
+        "corr_std": 0.004239288161419011,
+        "acc7": 0.43002915451895046,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_interp/lmf/multiseed_lmf.json"
+      }
+    },
+    "late_fusion": {
+      "teacher_1p5b": {
+        "mae": 0.8061907768249512,
+        "mae_std": 0.027322730210742874,
+        "corr": 0.7737691759718441,
+        "corr_std": 0.010416727044119008,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_text_teacher_1p5b/late_fusion/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_text_teacher_1p5b/late_fusion/multiseed_late_fusion.json"
+      },
+      "rawtext": {
+        "mae": 0.8874928236007691,
+        "mae_std": 0.02957428865624496,
+        "corr": 0.7168723249907873,
+        "corr_std": 0.010305533792864205,
+        "n": 5,
+        "manifest": "outputs/mmsa/mosi/control_rawtext/late_fusion/run_manifest.json",
+        "path": "outputs/mmsa/mosi/control_rawtext/late_fusion/multiseed_late_fusion.json"
+      },
+      "none": {
+        "mae": 0.9273171663284302,
+        "mae_std": 0.02324177338641827,
+        "corr": 0.6821851847287943,
+        "corr_std": 0.007781452707807617,
+        "acc7": 0.339067055393586,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_nointerp/late_fusion/multiseed_late_fusion.json"
+      },
+      "qwen7b_textonly": {
+        "mae": 0.6986633896827698,
+        "mae_std": 0.014803700286336683,
+        "corr": 0.8250238880693115,
+        "corr_std": 0.0016503351089573659,
+        "acc7": 0.4501457725947522,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/control_textonly/late_fusion/multiseed_late_fusion.json"
+      },
+      "matched": {
+        "mae": 0.7020414710044861,
+        "mae_std": 0.03046210600907136,
+        "corr": 0.8236848818415925,
+        "corr_std": 0.0029687107297412065,
+        "acc7": 0.4530612244897959,
+        "n": 5,
+        "path": "outputs/mmsa/mosi/multiseed_interp/late_fusion/multiseed_late_fusion.json"
+      }
+    }
+  },
+  "paired_tests": {
+    "temoe": {
+      "teacher_1p5b_vs_none": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.14372293949127196,
+        "sd": 0.01841689766386682,
+        "se": 0.008236287022212655,
+        "lo": -0.15986606205480877,
+        "hi": -0.12757981692773515,
+        "t": -17.449967334025857,
+        "p": 6.331750551672022e-05
+      },
+      "teacher_1p5b_vs_rawtext": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.09723575115203857,
+        "sd": 0.059463426018825455,
+        "se": 0.02659285255062468,
+        "lo": -0.14935774215126296,
+        "hi": -0.045113760152814195,
+        "t": -3.6564618619582596,
+        "p": 0.021647712945979426
+      },
+      "teacher_1p5b_vs_qwen7b_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.06177037954330444,
+        "sd": 0.024475771979228664,
+        "se": 0.010945897989467972,
+        "lo": 0.04031641948394722,
+        "hi": 0.08322433960266166,
+        "t": 5.643244583746281,
+        "p": 0.004854908990654152
+      },
+      "teacher_1p5b_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.07739568948745727,
+        "sd": 0.02556189901552131,
+        "se": 0.011431628766538119,
+        "lo": 0.05498969710504256,
+        "hi": 0.09980168186987198,
+        "t": 6.770311656201139,
+        "p": 0.0024834264871590375
+      },
+      "qwen7b_textonly_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.015625309944152833,
+        "sd": 0.015911928730663546,
+        "se": 0.007116030858979125,
+        "lo": 0.0016778894605537463,
+        "hi": 0.02957273042775192,
+        "t": 2.1957900764913854,
+        "p": 0.09308867661108361
+      }
+    },
+    "lmf": {
+      "teacher_1p5b_vs_none": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.12710731029510497,
+        "sd": 0.015089056163120524,
+        "se": 0.006748031059409929,
+        "lo": -0.14033345117154844,
+        "hi": -0.11388116941866151,
+        "t": -18.8362070618892,
+        "p": 4.6780072075771156e-05
+      },
+      "teacher_1p5b_vs_rawtext": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.07874460220336914,
+        "sd": 0.02466997607427644,
+        "se": 0.011032748701075103,
+        "lo": -0.10036878965747634,
+        "hi": -0.05712041474926194,
+        "t": -7.1373512020350605,
+        "p": 0.0020379906481759456
+      },
+      "teacher_1p5b_vs_qwen7b_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.10083324909210205,
+        "sd": 0.020293653282821983,
+        "se": 0.009075597650440343,
+        "lo": 0.08304507769723898,
+        "hi": 0.11862142048696511,
+        "t": 11.110370134930967,
+        "p": 0.00037336943279122524
+      },
+      "teacher_1p5b_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.09395655393600463,
+        "sd": 0.020655908797090325,
+        "se": 0.009237603241465974,
+        "lo": 0.07585085158273132,
+        "hi": 0.11206225628927795,
+        "t": 10.17109649332526,
+        "p": 0.0005262581715311424
+      },
+      "qwen7b_textonly_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.006876695156097412,
+        "sd": 0.02429729628388078,
+        "se": 0.01086608123204209,
+        "lo": -0.028174214370899908,
+        "hi": 0.014420824058705085,
+        "t": -0.6328588024741886,
+        "p": 0.5611997503122617
+      }
+    },
+    "late_fusion": {
+      "teacher_1p5b_vs_none": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.12112638950347901,
+        "sd": 0.04047237832797914,
+        "se": 0.018099797830490125,
+        "lo": -0.15660199325123966,
+        "hi": -0.08565078575571836,
+        "t": -6.692140466863933,
+        "p": 0.002593325674396163
+      },
+      "teacher_1p5b_vs_rawtext": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.08130204677581787,
+        "sd": 0.054295343903979276,
+        "se": 0.024281615966205292,
+        "lo": -0.12889401406958023,
+        "hi": -0.0337100794820555,
+        "t": -3.3482963773487135,
+        "p": 0.02861411451447139
+      },
+      "teacher_1p5b_vs_qwen7b_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.1075273871421814,
+        "sd": 0.02387829084355078,
+        "se": 0.010678696302538067,
+        "lo": 0.08659714238920678,
+        "hi": 0.128457631895156,
+        "t": 10.069336564672668,
+        "p": 0.0005471652248678338
+      },
+      "teacher_1p5b_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": 0.10414930582046508,
+        "sd": 0.054109730447945564,
+        "se": 0.024198607105159285,
+        "lo": 0.056720035894352885,
+        "hi": 0.1515785757465773,
+        "t": 4.3039380476680345,
+        "p": 0.01260629096822126
+      },
+      "qwen7b_textonly_vs_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "diff": -0.0033780813217163088,
+        "sd": 0.04262359808323423,
+        "se": 0.019061852551948293,
+        "lo": -0.04073931232353496,
+        "hi": 0.03398314968010234,
+        "t": -0.17721684251361172,
+        "p": 0.8679498896557903
+      }
+    }
+  },
+  "latency": {
+    "schema_version": 1,
+    "question": "How much cheaper is a 1.5B text teacher than the 7B VL model in text-only mode?",
+    "device": "NVIDIA A800 80GB PCIe",
+    "torch_version": "2.4.0+cu121",
+    "batch_size": 1,
+    "warmup_samples": 3,
+    "measured_samples": 30,
+    "prompt_sha256": "b60ae45e2c32de18aae9323c5555192c97ba8ae8681d4200e8e7d92dfe670dfb",
+    "prompt_template": "You are an affective-computing analyst. Watch this short clip and, in one sentence, explain the speaker's sentiment using facial expression, tone of voice, and words. Transcript: {text}\nSentiment interpretation:",
+    "max_new_tokens": 64,
+    "do_sample": false,
+    "model_load_excluded": true,
+    "text_1p5b": {
+      "model": "models/Qwen2.5-1.5B-Instruct",
+      "n": 30,
+      "median_s": 0.3976783826947212,
+      "mean_s": 0.458030720675985,
+      "min_s": 0.26703490875661373,
+      "p25_s": 0.3309022765606642,
+      "p75_s": 0.5647823214530945,
+      "max_s": 0.9068038687109947,
+      "per_sample_s": [
+        0.3697980269789696,
+        0.519142372533679,
+        0.39804093167185783,
+        0.3298598434776068,
+        0.3348259963095188,
+        0.2677685134112835,
+        0.7432305384427309,
+        0.8422844428569078,
+        0.3143504783511162,
+        0.5799956377595663,
+        0.3973158337175846,
+        0.4099775403738022,
+        0.46094461902976036,
+        0.308546656742692,
+        0.43487933836877346,
+        0.32964543998241425,
+        0.3294357433915138,
+        0.710967268794775,
+        0.37396272644400597,
+        0.5971509795635939,
+        0.3707609586417675,
+        0.9068038687109947,
+        0.3915040958672762,
+        0.3340295758098364,
+        0.2873615324497223,
+        0.26703490875661373,
+        0.4001046307384968,
+        0.6810602564364672,
+        0.6359017230570316,
+        0.4142371416091919
+      ],
+      "sample_outputs": [
+        "The speaker expresses disappointment or frustration with characters who do not demonstrate motivation behind their actions.",
+        "The speaker expresses disappointment or frustration with Cameron Diaz's performance as Plucky, describing her as \"just kind of useless.\"",
+        "The speaker appears to be expressing happiness and confidence through their smile and use of positive language."
+      ]
+    },
+    "vl_7b_textonly": {
+      "model": "models/Qwen2.5-VL-7B-Instruct",
+      "n": 30,
+      "median_s": 1.0560637088492513,
+      "mean_s": 1.0443812027573585,
+      "min_s": 0.6990459561347961,
+      "p25_s": 0.8962526312097907,
+      "p75_s": 1.177520977333188,
+      "max_s": 1.337110547348857,
+      "per_sample_s": [
+        0.9439654927700758,
+        1.12437560595572,
+        1.0766660831868649,
+        1.2311046998947859,
+        1.1418055836111307,
+        1.2030946835875511,
+        1.0271797124296427,
+        0.9935276638716459,
+        0.8586237467825413,
+        0.6990459561347961,
+        1.337110547348857,
+        0.9368887171149254,
+        0.7970199044793844,
+        0.7672243025153875,
+        1.1680053919553757,
+        1.176896620541811,
+        1.2227157820016146,
+        1.336709439754486,
+        1.177729096263647,
+        1.3367989510297775,
+        0.8835699912160635,
+        1.0722365472465754,
+        0.8921850770711899,
+        0.8094837982207537,
+        0.8500704597681761,
+        1.1426035799086094,
+        1.2417736779898405,
+        0.9084552936255932,
+        0.9346788059920073,
+        1.0398908704519272
+      ],
+      "sample_outputs": [
+        "The speaker expresses a critical sentiment, as indicated by their tone of voice and the use of \"BIH,\" suggesting frustration or disappointment with the characters' motivations in the story.",
+        "The speaker expresses disappointment and frustration with Cameron Diaz's performance, indicating a negative sentiment through their tone of voice and dismissive use of the word \"useless.\"",
+        "The speaker's sentiment is enthusiastic and confident, as indicated by their bright smile, energetic tone, and the use of positive affirmations like \"I'm pretty\" and \"I have a giant smile.\""
+      ]
+    },
+    "median_speedup_1p5b_over_7b": 2.655572328808079
+  }
+}

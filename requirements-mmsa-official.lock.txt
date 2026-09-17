@@ -1,0 +1,10 @@
+# Captured isolated environment used for the MMSA 2.2.1 reference runs.
+MMSA==2.2.1
+numpy==2.4.6
+pandas==3.0.5
+scikit-learn==1.9.1
+scipy==1.17.1
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+tqdm==4.70.1
+transformers==5.17.0

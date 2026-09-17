@@ -1,0 +1,27 @@
+seed: 42
+
+data:
+  name: mosei
+  pkl: MSA Datasets/MOSEI/Processed/aligned_50.pkl
+  interpretation_dir: null
+
+model:
+  d_model: 128
+  n_heads: 4
+  num_experts: 8
+  top_k: 2
+  dropout: 0.1
+  use_mamba: true
+  use_interpretation: true
+
+training:
+  output_dir: outputs/mmsa/mosei
+  label_range: [-3.0, 3.0]
+  epochs: 30
+  patience: 6
+  batch_size: 64
+  eval_batch_size: 128
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  aux_loss_weight: 0.01
+  max_grad_norm: 1.0

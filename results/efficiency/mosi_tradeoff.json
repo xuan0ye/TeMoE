@@ -1,0 +1,111 @@
+{
+  "batch_size": 32,
+  "seq_len": 50,
+  "num_experts": 8,
+  "rows": [
+    {
+      "variant": "backend=mamba",
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": true,
+      "params": 1229321,
+      "params_million": 1.2293,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 4.4376,
+      "throughput_samples_per_s": 7211.05,
+      "flops_gflops": 0.7754
+    },
+    {
+      "variant": "backend=gru",
+      "device": "cuda",
+      "temporal_backend": "bi-gru-fallback",
+      "use_interpretation": true,
+      "params": 1573001,
+      "params_million": 1.573,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 12.1035,
+      "throughput_samples_per_s": 2643.86,
+      "flops_gflops": 2.5861
+    },
+    {
+      "variant": "top_k=1",
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": true,
+      "params": 1229321,
+      "params_million": 1.2293,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 3.5585,
+      "throughput_samples_per_s": 8992.6,
+      "flops_gflops": 0.7713
+    },
+    {
+      "variant": "top_k=2",
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": true,
+      "params": 1229321,
+      "params_million": 1.2293,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 4.3993,
+      "throughput_samples_per_s": 7273.8,
+      "flops_gflops": 0.7754
+    },
+    {
+      "variant": "top_k=4",
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": true,
+      "params": 1229321,
+      "params_million": 1.2293,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 6.3398,
+      "throughput_samples_per_s": 5047.48,
+      "flops_gflops": 0.7838
+    },
+    {
+      "variant": "top_k=8",
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": true,
+      "params": 1229321,
+      "params_million": 1.2293,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 10.6462,
+      "throughput_samples_per_s": 3005.78,
+      "flops_gflops": 0.8006
+    },
+    {
+      "variant": "interpretation=cached",
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": true,
+      "params": 1229321,
+      "params_million": 1.2293,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 3.8398,
+      "throughput_samples_per_s": 8333.76,
+      "flops_gflops": 0.7754
+    },
+    {
+      "variant": "interpretation=off",
+      "device": "cuda",
+      "temporal_backend": "mamba",
+      "use_interpretation": false,
+      "params": 1180041,
+      "params_million": 1.18,
+      "batch_size": 32,
+      "seq_len": 50,
+      "latency_ms_per_batch": 4.0959,
+      "throughput_samples_per_s": 7812.68,
+      "flops_gflops": 0.7723
+    }
+  ]
+}

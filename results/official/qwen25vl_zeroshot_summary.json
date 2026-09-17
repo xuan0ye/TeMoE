@@ -1,0 +1,158 @@
+{
+  "mosi": {
+    "model": "models/Qwen2.5-VL-7B-Instruct",
+    "mode": "zero-shot-direct-score",
+    "config_sha256": "d4f90b61659a0c90234b0be799a1c7767f0928e6b336b4e059dcf5fcad3af3ef",
+    "config": {
+      "pkl": "MSA Datasets/MOSI/Processed/aligned_50.pkl",
+      "raw_dir": "MSA Datasets/MSA-Datasets/CMU-MOSI/Raw",
+      "vl_model": "models/Qwen2.5-VL-7B-Instruct",
+      "label_range": [
+        -3.0,
+        3.0
+      ],
+      "fps": 1.0,
+      "max_pixels": 100352,
+      "max_frames": 8,
+      "max_new_tokens": 16,
+      "sample_timeout_seconds": 90,
+      "blacklist": null,
+      "max_samples": null,
+      "prompt_template": "You are a multimodal sentiment analysis system. Watch this short clip and predict its sentiment intensity as a single number between -3.0 (strongly negative) and 3.0 (strongly positive), where 0 is neutral. Transcript: {text}\nRespond with ONLY the number, e.g. \"1.4\" or \"-0.8\". Score:"
+    },
+    "n_samples": 686,
+    "video_available": 686,
+    "video_available_rate": 1.0,
+    "parse_success_rate": 1.0,
+    "input_counts": {
+      "video_success": 686,
+      "planned_text_fallback": 0,
+      "runtime_text_fallback": 0,
+      "text_fallback_failures": 0,
+      "parse_failures_defaulted_to_neutral": 0
+    },
+    "prediction_summary": {
+      "mean": -0.6360058188438416,
+      "std": 2.092977523803711,
+      "min": -3.0,
+      "max": 2.9000000953674316,
+      "unique_rounded_4dp": 18
+    },
+    "test": {
+      "mae": 1.1087706089019775,
+      "corr": 0.7208571555756661,
+      "acc7": 0.3877551020408163,
+      "acc5": 0.47959183673469385,
+      "acc2_has0": 0.8206997084548106,
+      "f1_has0": 0.816111985030379,
+      "acc2_non0": 0.850609756097561,
+      "f1_non0": 0.8476676551847414,
+      "label_span": 6
+    },
+    "checkpoint": "outputs/mmsa/mosi/baselines/qwen25vl_zeroshot_predictions.jsonl"
+  },
+  "sims": {
+    "model": "models/Qwen2.5-VL-7B-Instruct",
+    "mode": "zero-shot-direct-score",
+    "config_sha256": "7faec847dc60c8002f2557c45c6a855a6da818cb5d94e4c08869e6dc0036e302",
+    "config": {
+      "pkl": "MSA Datasets/SIMS/Processed/unaligned_39.pkl",
+      "raw_dir": "MSA Datasets/MSA-Datasets/CH-SIMS/Raw",
+      "vl_model": "models/Qwen2.5-VL-7B-Instruct",
+      "label_range": [
+        -1.0,
+        1.0
+      ],
+      "fps": 1.0,
+      "max_pixels": 100352,
+      "max_frames": 8,
+      "max_new_tokens": 16,
+      "sample_timeout_seconds": 90,
+      "blacklist": null,
+      "max_samples": null,
+      "prompt_template": "You are a multimodal sentiment analysis system. Watch this short clip and predict its sentiment intensity as a single number between -1.0 (strongly negative) and 1.0 (strongly positive), where 0 is neutral. Transcript: {text}\nRespond with ONLY the number, e.g. \"1.4\" or \"-0.8\". Score:"
+    },
+    "n_samples": 457,
+    "video_available": 457,
+    "video_available_rate": 1.0,
+    "parse_success_rate": 1.0,
+    "input_counts": {
+      "video_success": 457,
+      "planned_text_fallback": 0,
+      "runtime_text_fallback": 0,
+      "text_fallback_failures": 0,
+      "parse_failures_defaulted_to_neutral": 0
+    },
+    "prediction_summary": {
+      "mean": -0.22516411542892456,
+      "std": 0.5342137217521667,
+      "min": -0.800000011920929,
+      "max": 1.0,
+      "unique_rounded_4dp": 11
+    },
+    "test": {
+      "mae": 0.40897154808044434,
+      "corr": 0.6702824116933105,
+      "acc7": 0.6345733041575492,
+      "acc5": 0.6345733041575492,
+      "acc2_has0": 0.7417943107221007,
+      "f1_has0": 0.7274290602369776,
+      "acc2_non0": 0.8324742268041238,
+      "f1_non0": 0.8260291943674786,
+      "label_span": 2
+    },
+    "checkpoint": "outputs/mmsa/sims/baselines/qwen25vl_zeroshot_predictions.jsonl"
+  },
+  "mosei": {
+    "model": "models/Qwen2.5-VL-7B-Instruct",
+    "mode": "zero-shot-direct-score",
+    "config_sha256": "8f4cca3736c493f6360f9e9284586184b688fbe081902c4ed86f5bf510787862",
+    "config": {
+      "pkl": "MSA Datasets/MOSEI/Processed/aligned_50.pkl",
+      "raw_dir": "MSA Datasets/MSA-Datasets/CMU-MOSEI/Raw",
+      "vl_model": "models/Qwen2.5-VL-7B-Instruct",
+      "label_range": [
+        -3.0,
+        3.0
+      ],
+      "fps": 1.0,
+      "max_pixels": 100352,
+      "max_frames": 8,
+      "max_new_tokens": 16,
+      "sample_timeout_seconds": 90,
+      "blacklist": "outputs/mmsa/mosei/video_blacklist.json",
+      "max_samples": null,
+      "prompt_template": "You are a multimodal sentiment analysis system. Watch this short clip and predict its sentiment intensity as a single number between -3.0 (strongly negative) and 3.0 (strongly positive), where 0 is neutral. Transcript: {text}\nRespond with ONLY the number, e.g. \"1.4\" or \"-0.8\". Score:"
+    },
+    "n_samples": 4659,
+    "video_available": 4404,
+    "video_available_rate": 0.9453,
+    "parse_success_rate": 1.0,
+    "input_counts": {
+      "video_success": 4404,
+      "planned_text_fallback": 255,
+      "runtime_text_fallback": 0,
+      "text_fallback_failures": 0,
+      "parse_failures_defaulted_to_neutral": 0
+    },
+    "prediction_summary": {
+      "mean": 0.3098733723163605,
+      "std": 1.9503707885742188,
+      "min": -3.0,
+      "max": 2.9000000953674316,
+      "unique_rounded_4dp": 25
+    },
+    "test": {
+      "mae": 1.2378193140029907,
+      "corr": 0.626711958429002,
+      "acc7": 0.33784073835587036,
+      "acc5": 0.3623095084782142,
+      "acc2_has0": 0.7804249839021249,
+      "f1_has0": 0.7897392655533838,
+      "acc2_non0": 0.8310401761144744,
+      "f1_non0": 0.833297261655676,
+      "label_span": 6
+    },
+    "checkpoint": "outputs/mmsa/mosei/baselines/qwen25vl_zeroshot_predictions.jsonl"
+  }
+}

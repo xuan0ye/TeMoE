@@ -1,0 +1,138 @@
+[
+  {
+    "tag": "aligned",
+    "dataset": "mosei",
+    "model": "misa",
+    "mae": 0.5508,
+    "mae_std": 0.0037,
+    "corr": 0.7595999999999999,
+    "corr_std": 0.001,
+    "acc7": 52.31,
+    "acc2_has0": 81.12,
+    "f1_has0": 81.58,
+    "scaled": [
+      "Corr",
+      "MAE"
+    ],
+    "csv": "official_runs/aligned/results/mosei/MISA/normal/mosei.csv"
+  },
+  {
+    "tag": "aligned",
+    "dataset": "mosei",
+    "model": "mmim",
+    "mae": 0.5739,
+    "mae_std": 0.006,
+    "corr": 0.7234999999999999,
+    "corr_std": 0.0084,
+    "acc7": 51.63,
+    "acc2_has0": 80.32,
+    "f1_has0": 80.68,
+    "scaled": [
+      "Corr",
+      "MAE"
+    ],
+    "csv": "official_runs/aligned/results/mosei/MMIM/normal/mosei.csv"
+  },
+  {
+    "tag": "aligned",
+    "dataset": "mosei",
+    "model": "self_mm",
+    "mae": 0.5382,
+    "mae_std": 0.0038,
+    "corr": 0.7576,
+    "corr_std": 0.0046,
+    "acc7": 53.2,
+    "acc2_has0": 83.26,
+    "f1_has0": 83.37,
+    "scaled": [
+      "Corr",
+      "MAE"
+    ],
+    "csv": "official_runs/aligned/results/mosei/Self_MM/normal/mosei.csv"
+  },
+  {
+    "tag": "aligned_run1",
+    "dataset": "mosei",
+    "model": "lmf",
+    "mae": 0.5670000000000001,
+    "mae_std": 0.0040999999999999995,
+    "corr": 0.7295,
+    "corr_std": 0.005600000000000001,
+    "acc7": 51.84,
+    "acc2_has0": 80.97,
+    "f1_has0": 81.35,
+    "scaled": [
+      "Corr",
+      "MAE"
+    ],
+    "csv": "official_runs/aligned_run1/results/normal/mosei.csv"
+  },
+  {
+    "tag": "aligned_run1",
+    "dataset": "mosi",
+    "model": "lmf",
+    "mae": 1.0529000000000002,
+    "mae_std": 0.18289999999999998,
+    "corr": 0.5506,
+    "corr_std": 0.2255,
+    "acc7": 29.74,
+    "acc2_has0": 71.75,
+    "f1_has0": 71.18,
+    "scaled": [
+      "Corr",
+      "MAE"
+    ],
+    "csv": "official_runs/aligned_run1/results/normal/mosi.csv"
+  },
+  {
+    "tag": "aligned_run1",
+    "dataset": "mosi",
+    "model": "misa",
+    "mae": 0.7598,
+    "mae_std": 0.0274,
+    "corr": 0.7811,
+    "corr_std": 0.009300000000000001,
+    "acc7": 43.09,
+    "acc2_has0": 81.31,
+    "f1_has0": 81.26,
+    "scaled": [
+      "Corr",
+      "MAE"
+    ],
+    "csv": "official_runs/aligned_run1/results/normal/mosi.csv"
+  },
+  {
+    "tag": "aligned_run1",
+    "dataset": "mosi",
+    "model": "self_mm",
+    "mae": 0.7293999999999999,
+    "mae_std": 0.0152,
+    "corr": 0.7883,
+    "corr_std": 0.005600000000000001,
+    "acc7": 45.69,
+    "acc2_has0": 82.83,
+    "f1_has0": 82.77,
+    "scaled": [
+      "Corr",
+      "MAE"
+    ],
+    "csv": "official_runs/aligned_run1/results/normal/mosi.csv"
+  },
+  {
+    "tag": "aligned_run1",
+    "dataset": "mosi",
+    "model": "mmim",
+    "mae": 0.7469,
+    "mae_std": 0.027200000000000002,
+    "corr": 0.7741,
+    "corr_std": 0.01,
+    "acc7": 44.11,
+    "acc2_has0": 82.33,
+    "f1_has0": 82.26,
+    "scaled": [
+      "Corr",
+      "MAE"
+    ],
+    "csv": "official_runs/aligned_run1/results/normal/mosi.csv"
+  }
+]
