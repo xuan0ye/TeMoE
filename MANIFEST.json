@@ -30,8 +30,8 @@
     },
     {
       "path": "REPRODUCIBILITY.md",
-      "bytes": 4693,
-      "sha256": "f761ea23d8defe62947a97744d1b7f4094020a82d77049378fd88a498393b169"
+      "bytes": 4994,
+      "sha256": "fa5b6f6d1c9480ab0609953ac509f082ad1779333f095b35d91c14dd5c1b2aaf"
     },
     {
       "path": "mmsa/__init__.py",
@@ -440,8 +440,8 @@
     },
     {
       "path": "run_release_audit_gated.sh",
-      "bytes": 5961,
-      "sha256": "69b6719f1cdf87c5f98f96e825f0fe91b6f432fb8e05a90379edc95e0874caee"
+      "bytes": 6248,
+      "sha256": "66071c45c607c2bcdd109842c5434b525e152fe6c2695aa07fcf730b2d18e592"
     },
     {
       "path": "run_text_teacher_control_gated.sh",
