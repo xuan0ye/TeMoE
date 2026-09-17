@@ -1,8 +1,13 @@
 {
   "schema_version": 1,
   "artifact": "TeMoE controlled-study release candidate",
-  "file_count": 101,
+  "file_count": 102,
   "files": [
+    {
+      "path": ".github/workflows/python-package-conda.yml",
+      "bytes": 423,
+      "sha256": "a9e8b36339064a804531d871443608788d54548422cb4a3822d32cb6f497ac0f"
+    },
     {
       "path": ".gitignore",
       "bytes": 142,
