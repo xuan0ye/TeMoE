@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact": "TeMoE controlled-study release candidate",
-  "file_count": 91,
+  "file_count": 101,
   "files": [
     {
       "path": ".gitignore",
@@ -10,8 +10,8 @@
     },
     {
       "path": "ENVIRONMENT.md",
-      "bytes": 1226,
-      "sha256": "0e5982ab39748a03a418a3724a44782e78bcf894fdac87884724dc2e2b4b48e6"
+      "bytes": 895,
+      "sha256": "5d29e0f3db95e77935c0e21d1096ef1478ec99506586c256b3226777749924b5"
     },
     {
       "path": "LICENSE-NOTICE.md",
@@ -20,8 +20,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3592,
-      "sha256": "ade1755ed09d3357842115051d9d6a6f8565a43db7792a21bfac8504c5e83b8e"
+      "bytes": 3529,
+      "sha256": "2236cf8d6a2430f9c2f17108040c012f214ed15de2d0118f08e997340b79e1bb"
     },
     {
       "path": "RELEASE_POLICY.md",
@@ -30,8 +30,8 @@
     },
     {
       "path": "REPRODUCIBILITY.md",
-      "bytes": 4693,
-      "sha256": "f761ea23d8defe62947a97744d1b7f4094020a82d77049378fd88a498393b169"
+      "bytes": 4994,
+      "sha256": "fa5b6f6d1c9480ab0609953ac509f082ad1779333f095b35d91c14dd5c1b2aaf"
     },
     {
       "path": "mmsa/__init__.py",
@@ -321,22 +321,22 @@
     {
       "path": "requirements-mamba.lock.txt",
       "bytes": 91,
-      "sha256": "bfaf82acb29e878694be59473e5ea7f1379aae760d96e12ca49c7172ca0edb45"
+      "sha256": "d73ed60db308accdcff74db78892e77dc5e27dd6ccf5051eaed842e3936e8030"
     },
     {
       "path": "requirements-mmsa-official.lock.txt",
-      "bytes": 224,
-      "sha256": "6fa10544db854e803f9d2ab43d901f777aa8be50a3bb98a5b3d436b09a7f261d"
+      "bytes": 253,
+      "sha256": "baadd6bd149ccb17893377d5a7b981ccbde12937c7c447ed68c685e3d4bacae1"
     },
     {
       "path": "requirements.lock.txt",
-      "bytes": 347,
-      "sha256": "185598ba3990cd7def6945ef35b53842f1241a5980b63a27cf5bad2b98c059e9"
+      "bytes": 362,
+      "sha256": "dbb05764d3bef3e378f669a080db277fcba5278e1d60e017d9a7558802175e00"
     },
     {
       "path": "results/RESULTS.md",
-      "bytes": 2895,
-      "sha256": "973fbd6e213300906d153be808e16d88a3812ce4c1f2a05e3cc66edabd3bbcd3"
+      "bytes": 3899,
+      "sha256": "beb27273555c1ce717db3753f9c8fff4e3f5775560094aa8f745d4a266e81c3a"
     },
     {
       "path": "results/condition_audit.json",
@@ -359,6 +359,11 @@
       "sha256": "1b582338ab8a6fa700d133871a708b91f31b7e6c3d6ad4b6f369b93236cfb5ea"
     },
     {
+      "path": "results/efficiency/end_to_end_v2_full.json",
+      "bytes": 5617,
+      "sha256": "c63aedf1dd6bed89ce30ba37d46267f0635ed0949673026d54ea8edc09600844"
+    },
+    {
       "path": "results/efficiency/mosi_tradeoff.json",
       "bytes": 2886,
       "sha256": "e1d7d811730ee03f20bac2693a4e25edea46e6c9bca0cceb6e3f5546918e8157"
@@ -367,6 +372,16 @@
       "path": "results/efficiency/mosi_tradeoff.md",
       "bytes": 649,
       "sha256": "6786e51813a1727d4e4888e3814bcbb6ad63a45d5952ddc03ec8b578230ef8ec"
+    },
+    {
+      "path": "results/environment/mmsa_official.freeze.txt",
+      "bytes": 1634,
+      "sha256": "b8e985c1da5561789fc72baf08d05a9b95af95b130e9d0110de1bd1ac9c5060a"
+    },
+    {
+      "path": "results/environment/wjhenv.freeze.txt",
+      "bytes": 3042,
+      "sha256": "aaec9576b840c01e5ba2a009b1d35d20ce59be8e993db34983f7d64d8c006d6e"
     },
     {
       "path": "results/official/control_caches.json",
@@ -389,6 +404,16 @@
       "sha256": "0c64446e3503682f76839c5ca0d4ed0a43e880451c232fe9df462470fd9f214f"
     },
     {
+      "path": "results/official/official_crossing_mosi_full.json",
+      "bytes": 1591,
+      "sha256": "509fd366c9bac8062db79eaeafa9a974b598ea9101eb247d6a56375f35ce1f84"
+    },
+    {
+      "path": "results/official/official_crossing_mosi_full.md",
+      "bytes": 548,
+      "sha256": "fdb530522a09625794fd91ec99c0d0b073bd863c6a36382ade3cf40641235173"
+    },
+    {
       "path": "results/official/qwen25vl_zeroshot_summary.json",
       "bytes": 5639,
       "sha256": "926e4e1175f53af100ea3e2f5bb69513d87518c4473985e578403c03efa43434"
@@ -402,6 +427,31 @@
       "path": "results/official/text_teacher_control.json",
       "bytes": 15789,
       "sha256": "1eb1880f38c22e6d39f9d06eee4417cb7d39242e583a165e4b73ca2957dfbcfb"
+    },
+    {
+      "path": "results/official_crossing/cached_LMF_mosi.csv",
+      "bytes": 455,
+      "sha256": "7ec19af5cd50fb6869b1f67d6e86dff4eafe1f9fa6519c9baeb19baf3501e33b"
+    },
+    {
+      "path": "results/official_crossing/cached_LMF_run_record.json",
+      "bytes": 1023,
+      "sha256": "0112493a4cdc970581de05bcc6d73d78bff2cba8ba2bf5fd677f4a8468b1b1ff"
+    },
+    {
+      "path": "results/official_crossing/manifest.json",
+      "bytes": 3428,
+      "sha256": "669c081a7fa9a137b8376c6e20aac1c6a0539bfcad30b188a6cf8350413886b5"
+    },
+    {
+      "path": "results/official_crossing/no_cache_LMF_mosi.csv",
+      "bytes": 455,
+      "sha256": "fed9cea2077b078e175fdb40c13f50729a5b809664ef6de605fd2d786a6fa59c"
+    },
+    {
+      "path": "results/official_crossing/no_cache_LMF_run_record.json",
+      "bytes": 1027,
+      "sha256": "6ca65e06c646f498594e4d70e6ba0f9ebfb7c493c48a6bc0b6a8065c930786bb"
     },
     {
       "path": "run_baseline_upgrade.sh",
@@ -440,8 +490,8 @@
     },
     {
       "path": "run_release_audit_gated.sh",
-      "bytes": 5961,
-      "sha256": "69b6719f1cdf87c5f98f96e825f0fe91b6f432fb8e05a90379edc95e0874caee"
+      "bytes": 6248,
+      "sha256": "66071c45c607c2bcdd109842c5434b525e152fe6c2695aa07fcf730b2d18e592"
     },
     {
       "path": "run_text_teacher_control_gated.sh",
@@ -455,8 +505,8 @@
     },
     {
       "path": "scripts/release_check.py",
-      "bytes": 8300,
-      "sha256": "f1ba188f7fd84506cfddb7e35303a27a335f7d86d3c882bd8a0f959c0015a610"
+      "bytes": 8308,
+      "sha256": "8e9debc52f02fd184c31144d9de94eff0a9c979010dca2c6caa94c5f2592ba6d"
     }
   ],
   "excluded_categories": [

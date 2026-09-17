@@ -51,7 +51,10 @@ case "$STAGE" in
   full)
     SAMPLES=30
     WARMUP=2
-    MODELS=(MISA Self_MM MMIM LMF)
+    # LMF is the released MMSA model that natively accepts continuous text
+    # features. MISA/Self-MM/MMIM require use_bert=True and therefore cannot
+    # receive an appended 384-D cache without patching the official model.
+    MODELS=(LMF)
     SEEDS=(42 1 2 3 4)
     TAG=full
     ;;
@@ -118,11 +121,13 @@ SUMMARY="outputs/mmsa/official/official_crossing_mosi_${TAG}.json"
 echo "[official-crossing] prepare start=$(date '+%F %T')"
 $PYTHON -m mmsa.analysis.official_crossing prepare --source-pkl "$MOSI_PKL" --cache-dir "$MOSI_CACHE" --output-dir "$DATA_ROOT"
 
+RUN_RECORD_DIRS=()
 for arm in no_cache cached; do
   for model in "${MODELS[@]}"; do
     echo "[official-crossing] start arm=$arm model=$model $(date '+%F %T')"
     "$OFFICIAL_PYTHON" -m mmsa.analysis.official_crossing run --dataset mosi --model "$model" --arm "$arm" --manifest "$MANIFEST" --run-root "$RUN_ROOT" --seeds "${SEEDS[@]}"
     echo "[official-crossing] end arm=$arm model=$model $(date '+%F %T')"
+    RUN_RECORD_DIRS+=("$RUN_ROOT/$arm/$model")
   done
 done
 
@@ -139,7 +144,7 @@ print(f"[verified] matched speedup={matched['speedup_online_over_cached']}x offi
 PY
 
 RESULT_TAR="release_audit_results_${TAG}.tgz"
-tar --exclude='*/saved_models' --exclude='*/saved_models/*' -czf "$RESULT_TAR" "$EFF_OUT" "$SUMMARY" "${SUMMARY%.json}.md" "$MANIFEST" "$RUN_ROOT" outputs/mmsa/official/env_release_audit_wjhenv.txt outputs/mmsa/official/env_release_audit_mmsa.txt
+tar --exclude='*/saved_models' --exclude='*/saved_models/*' -czf "$RESULT_TAR" "$EFF_OUT" "$SUMMARY" "${SUMMARY%.json}.md" "$MANIFEST" "${RUN_RECORD_DIRS[@]}" outputs/mmsa/official/env_release_audit_wjhenv.txt outputs/mmsa/official/env_release_audit_mmsa.txt
 
 echo "[release-audit] COMPLETE stage=$STAGE $(date '+%F %T')"
 echo "[release-audit] return: $RESULT_TAR"

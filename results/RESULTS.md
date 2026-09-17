@@ -41,21 +41,40 @@ this pipeline and are not claimed to reproduce the original papers exactly.
   establish an external implementation reference; they do not by themselves
   constitute the new cache/no-cache crossing.
 
-The five-seed official MMSA cache crossing introduced for the release audit was
-still running when this snapshot was built. Its smoke result is intentionally
-excluded from formal claims. The final files belong at:
+The completed data-only crossing uses the released MMSA 2.2.1 LMF model and
+trainer without source changes. Both arms have 701,679 trainable parameters and
+the same configuration, feature shape, and seeds. Mean MAE changes from
+0.9605+/-0.0142 without the cache to 0.7019+/-0.0205 with it; the paired
+cached-minus-no-cache delta is -0.2586 (95% CI [-0.2770, -0.2401],
+two-sided paired p=2.61e-6), and the cache is better on all five seeds.
+
+Evidence:
 
 ```text
 official/official_crossing_mosi_full.json
 official/official_crossing_mosi_full.md
+official_crossing/manifest.json
+official_crossing/{no_cache,cached}_LMF_run_record.json
+official_crossing/{no_cache,cached}_LMF_mosi.csv
 ```
+
+The released MISA, Self-MM, and MMIM implementations require BERT-token input;
+adding this continuous cache would require modifying their model input paths,
+so they are retained only as uncached external references rather than described
+as an unmodified official-code crossing.
 
 ## Efficiency
 
 `efficiency/end_to_end.json` records the legacy 30-clip online median of
 1.351 s and the 3.8123 ms GPU-resident TeMoE forward. These have different
 boundaries and yield a **component ratio** of 354.4x, not an end-to-end speedup.
-The matched-boundary v2 full report is pending and must be added as
-`efficiency/end_to_end_v2_full.json` after the full audit completes.
+The completed matched-boundary audit (`efficiency/end_to_end_v2_full.json`)
+includes cache lookup, tensor construction, host-to-device transfer, the same
+trained TeMoE forward, and CUDA synchronization in both arms. Its medians are
+4.8876 ms cached and 1318.5486 ms online, a 269.8x ratio; one-time model and
+dataset loading and external network transport are excluded from both.
 
 `efficiency/mosi_tradeoff.{json,md}` contains the internal efficiency profile.
+
+Exact primary and official-MMSA package freezes are under
+`environment/{wjhenv,mmsa_official}.freeze.txt`.

@@ -95,9 +95,13 @@ nohup env STAGE=full bash run_release_audit_gated.sh \
 echo $! > release_audit_full.pid
 ```
 
-The full run uses 30 timing samples and four MMSA models under two conditions,
-with five paired seeds per condition. On one A800 it is expected to take about
-5--7 hours.
+The full run uses 30 timing samples and the released MMSA LMF model under two
+conditions, with five paired seeds per condition. LMF natively accepts the
+continuous text features needed by the data-only adapter. The released MISA,
+Self-MM, and MMIM paths require `use_bert=True`; adding a continuous cache to
+them would require modifying the official model and would no longer be an
+unmodified-code crossing. On one A800 the complete audit is expected to take
+about 15--30 minutes.
 
 Progress:
 
@@ -110,7 +114,7 @@ find outputs/mmsa/official_crossing/mosi_full/runs \
 nvidia-smi
 ```
 
-There are eight final `run_record.json` files: four models times two arms.
+There are two final `run_record.json` files: LMF times two arms.
 Successful completion produces:
 
 ```text

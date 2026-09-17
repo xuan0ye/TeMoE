@@ -27,7 +27,7 @@ FORBIDDEN_SUFFIXES = {
     ".tgz", ".wav", ".zip",
 }
 TEXT_SUFFIXES = {
-    ".cfg", ".ini", ".json", ".md", ".py", ".sh", ".txt", ".yaml", ".yml",
+    ".cfg", ".csv", ".ini", ".json", ".md", ".py", ".sh", ".txt", ".yaml", ".yml",
 }
 PRIVATE_PATTERNS = {
     "unix_home": re.compile(r"/home/[^/\s]+/", re.IGNORECASE),
