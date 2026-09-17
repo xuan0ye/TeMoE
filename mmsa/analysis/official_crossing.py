@@ -413,6 +413,7 @@ def summarize_crossing(
     adjusted = _holm([row["paired_p_two_sided"] for row in comparisons])
     for row, p_holm in zip(comparisons, adjusted):
         row["holm_p_across_official_models"] = p_holm
+    multiple_models = len(comparisons) > 1
 
     report = {
         "schema_version": 1,
@@ -422,7 +423,11 @@ def summarize_crossing(
             "cache_adapter": "384-D rationale embedding appended to every aligned text timestep",
             "control": "same added dimensions filled with zeros",
             "paired_seeds": expected_seeds,
-            "multiplicity": "Holm correction across official models",
+            "multiplicity": (
+                "Holm correction across official models"
+                if multiple_models
+                else "not applicable (one official-model comparison)"
+            ),
         },
         "comparisons": comparisons,
         "all_models_cache_better_on_mean": all(
@@ -441,7 +446,9 @@ def summarize_crossing(
         "384-D rationale embedding to each aligned text timestep; the control appends zeros",
         "of the same size. Both arms therefore have identical parameters and training budgets.",
         "",
-        "| official model | params/arm | no cache MAE | cached MAE | paired delta | 95% CI | Holm p | cached better seeds |",
+        "| official model | params/arm | no cache MAE | cached MAE | paired delta | 95% CI | "
+        + ("Holm p" if multiple_models else "two-sided paired p")
+        + " | cached better seeds |",
         "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for row in comparisons:
@@ -451,7 +458,8 @@ def summarize_crossing(
             f"| {row['no_cache_mean_mae']:.4f}+-{row['no_cache_std_mae_ddof1']:.4f} "
             f"| {row['cached_mean_mae']:.4f}+-{row['cached_std_mae_ddof1']:.4f} "
             f"| {row['paired_delta_cached_minus_no_cache']:+.4f} "
-            f"| [{low:+.4f}, {high:+.4f}] | {row['holm_p_across_official_models']:.4g} "
+            f"| [{low:+.4f}, {high:+.4f}] | "
+            f"{(row['holm_p_across_official_models'] if multiple_models else row['paired_p_two_sided']):.4g} "
             f"| {row['cached_better_seed_count']}/{len(expected_seeds)} |"
         )
     markdown.write_text("\n".join(lines) + "\n", encoding="utf-8")
