@@ -17,7 +17,8 @@ rationale embedding caches.
 - paired equivalence tests for temporal and routing alternatives;
 - zero-shot Qwen2.5-VL baselines;
 - a matched-boundary latency audit;
-- a sensitivity study using MMSA 2.2.1's released models and trainer.
+- a five-seed cache/no-cache crossing using MMSA 2.2.1's released LMF model
+  and trainer without source modifications.
 
 The original aggregate evidence is under [`results/`](results/). A compact
 map from paper claims to evidence files is in
@@ -84,11 +85,10 @@ in the gated shell scripts.
 ## Anonymity and current status
 
 This candidate contains no author names, email addresses, account names,
-machine hostnames, or absolute local paths. The new five-seed official-code
-cache crossing and matched-boundary full timing audit were still running when
-this snapshot was assembled; only a smoke run existed, so no smoke number is
-presented as a formal result. The eventual full JSON/Markdown reports can be
-added under `results/official/` without changing the protocol.
+machine hostnames, or absolute local paths. The completed five-seed
+official-code crossing, matched-boundary timing audit, sanitized run records,
+and exact environment freezes are included under `results/`. Smoke numbers are
+not presented as formal results.
 
 See [`LICENSE-NOTICE.md`](LICENSE-NOTICE.md) before redistributing or reusing
 the source code.

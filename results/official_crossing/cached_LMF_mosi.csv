@@ -1,0 +1,2 @@
+Model,Has0_acc_2,Has0_F1_score,Non0_acc_2,Non0_F1_score,Mult_acc_5,Mult_acc_7,MAE,Corr,Loss
+lmf,"(np.float64(84.96), np.float64(0.66))","(np.float64(84.83), np.float64(0.69))","(np.float64(86.89), np.float64(0.51))","(np.float64(86.82), np.float64(0.53))","(np.float64(50.06), np.float64(3.36))","(np.float64(43.32), np.float64(2.51))","(np.float64(70.19), np.float64(1.83))","(np.float64(82.32), np.float64(0.4))","(np.float64(70.24), np.float64(1.76))"

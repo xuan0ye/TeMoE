@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "dataset": "mosi",
+  "model": "LMF",
+  "config_lookup_name": "lmf",
+  "arm": "no_cache",
+  "seeds": [
+    42,
+    1,
+    2,
+    3,
+    4
+  ],
+  "feature_path": "<PROJECT_ROOT>/outputs/mmsa/official_crossing/mosi_full/data/aligned_50_official_crossing_no_cache.pkl",
+  "feature_sha256": "8b4dfd187d5be713f8d0a2d67b4cff72cb3db2952a714da189592a3c04d417ce",
+  "feature_dims": [
+    1152,
+    5,
+    20
+  ],
+  "use_bert": false,
+  "mmsa_version": "2.2.1",
+  "mmsa_package_file": "<MMSA_OFFICIAL_ENV>/lib/python3.11/site-packages/MMSA/__init__.py",
+  "mmsa_package_file_sha256": "91df8d84358553fbc3cb0d1fd8b2b95ec7f943fe6ea0a34fb77312524a228488",
+  "mmsa_python_source_tree_sha256": "30d27b0352fd0714b301a014183dd2d1e3c5864e0df349aea664f0a1450acb72",
+  "mmsa_python_source_file_count": 64,
+  "official_config_sha256_except_feature_path": "6de65901e426b3b7dbb100155aa6c4488234b4638a65471e93f0fa8db67da934",
+  "model_and_trainer_modified": false,
+  "status": "ok",
+  "returned": "None",
+  "seconds": 181.1
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "protocol": {
+    "dataset": "mosi",
+    "implementation": "MMSA 2.2.1 released model and trainer, unmodified",
+    "cache_adapter": "384-D rationale embedding appended to every aligned text timestep",
+    "control": "same added dimensions filled with zeros",
+    "paired_seeds": [
+      42,
+      1,
+      2,
+      3,
+      4
+    ],
+    "multiplicity": "Holm correction across official models"
+  },
+  "comparisons": [
+    {
+      "model": "LMF",
+      "seeds": [
+        42,
+        1,
+        2,
+        3,
+        4
+      ],
+      "no_cache_mae": [
+        0.9614,
+        0.9524,
+        0.9487,
+        0.9844,
+        0.9554
+      ],
+      "cached_mae": [
+        0.6822,
+        0.6911,
+        0.689,
+        0.7295,
+        0.7177
+      ],
+      "no_cache_mean_mae": 0.9604600000000001,
+      "no_cache_std_mae_ddof1": 0.014167498014822538,
+      "cached_mean_mae": 0.7019,
+      "cached_std_mae_ddof1": 0.020509388094236268,
+      "paired_delta_cached_minus_no_cache": -0.25856,
+      "delta_95ci": [
+        -0.27701189572601514,
+        -0.24010810427398485
+      ],
+      "paired_t": -38.90536002692742,
+      "paired_p_two_sided": 2.607372577839814e-06,
+      "cached_better_seed_count": 5,
+      "trainable_params_both_arms": 701679,
+      "no_cache_log": "outputs/mmsa/official_crossing/mosi_full/runs/no_cache/LMF/logs/lmf-mosi.log",
+      "cached_log": "outputs/mmsa/official_crossing/mosi_full/runs/cached/LMF/logs/lmf-mosi.log",
+      "holm_p_across_official_models": 2.607372577839814e-06
+    }
+  ],
+  "all_models_cache_better_on_mean": true
+}

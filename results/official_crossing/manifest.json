@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "protocol": "official MMSA unmodified model/trainer; rationale appended to text features",
+  "source_pkl": "<PROJECT_ROOT>/MSA Datasets/MOSI/Processed/aligned_50.pkl",
+  "source_pkl_sha256": "d3994fd25681f9c7ad6e9c6596a6fe9b4beb85ff7d478ba978b124139002e5f9",
+  "cache_dir": "<PROJECT_ROOT>/data/interpretation/mosi_video",
+  "arms": {
+    "no_cache": {
+      "feature_path": "<PROJECT_ROOT>/outputs/mmsa/official_crossing/mosi_full/data/aligned_50_official_crossing_no_cache.pkl",
+      "feature_sha256": "8b4dfd187d5be713f8d0a2d67b4cff72cb3db2952a714da189592a3c04d417ce",
+      "bytes": 536193674,
+      "splits": {
+        "train": {
+          "source_split_key": "train",
+          "n": 1284,
+          "seq_len": 50,
+          "source_text_dim": 768,
+          "cache_dim": 384,
+          "output_text_dim": 1152,
+          "audio_dim": 5,
+          "vision_dim": 20,
+          "cache_sha256": "9236b0fe0506095a2535595d6143361ad5057d15dc5ffc54ee5a58717c464111"
+        },
+        "valid": {
+          "source_split_key": "valid",
+          "n": 229,
+          "seq_len": 50,
+          "source_text_dim": 768,
+          "cache_dim": 384,
+          "output_text_dim": 1152,
+          "audio_dim": 5,
+          "vision_dim": 20,
+          "cache_sha256": "795efac937db2df23711aa6661be30709c5880f1ec998add92e2a4d33645d967"
+        },
+        "test": {
+          "source_split_key": "test",
+          "n": 686,
+          "seq_len": 50,
+          "source_text_dim": 768,
+          "cache_dim": 384,
+          "output_text_dim": 1152,
+          "audio_dim": 5,
+          "vision_dim": 20,
+          "cache_sha256": "32f67580622d8150beb0e68fca86c759bf258ceb4cd3c666d529f8ffd17b4ea0"
+        }
+      }
+    },
+    "cached": {
+      "feature_path": "<PROJECT_ROOT>/outputs/mmsa/official_crossing/mosi_full/data/aligned_50_official_crossing_cached.pkl",
+      "feature_sha256": "9460057d68220ecfd6bb5198e201de534bff678af203b6d558ec5f01016b5ddf",
+      "bytes": 536193674,
+      "splits": {
+        "train": {
+          "source_split_key": "train",
+          "n": 1284,
+          "seq_len": 50,
+          "source_text_dim": 768,
+          "cache_dim": 384,
+          "output_text_dim": 1152,
+          "audio_dim": 5,
+          "vision_dim": 20,
+          "cache_sha256": "9236b0fe0506095a2535595d6143361ad5057d15dc5ffc54ee5a58717c464111"
+        },
+        "valid": {
+          "source_split_key": "valid",
+          "n": 229,
+          "seq_len": 50,
+          "source_text_dim": 768,
+          "cache_dim": 384,
+          "output_text_dim": 1152,
+          "audio_dim": 5,
+          "vision_dim": 20,
+          "cache_sha256": "795efac937db2df23711aa6661be30709c5880f1ec998add92e2a4d33645d967"
+        },
+        "test": {
+          "source_split_key": "test",
+          "n": 686,
+          "seq_len": 50,
+          "source_text_dim": 768,
+          "cache_dim": 384,
+          "output_text_dim": 1152,
+          "audio_dim": 5,
+          "vision_dim": 20,
+          "cache_sha256": "32f67580622d8150beb0e68fca86c759bf258ceb4cd3c666d529f8ffd17b4ea0"
+        }
+      }
+    }
+  },
+  "invariants": [
+    "original text/audio/vision/labels are unchanged",
+    "cached and no_cache pkls have identical shapes",
+    "no_cache appends zeros with the same dimension as the rationale cache",
+    "MMSA model and trainer source are not patched",
+    "both arms use identical seeds and official hyperparameters"
+  ]
+}

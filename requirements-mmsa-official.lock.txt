@@ -1,7 +1,9 @@
 # Captured isolated environment used for the MMSA 2.2.1 reference runs.
 MMSA==2.2.1
+easydict==1.13
 numpy==2.4.6
 pandas==3.0.5
+PyYAML==6.0.3
 scikit-learn==1.9.1
 scipy==1.17.1
 torch==2.5.1+cu121
