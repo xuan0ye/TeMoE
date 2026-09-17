@@ -95,8 +95,8 @@
     },
     {
       "path": "mmsa/analysis/official_crossing.py",
-      "bytes": 20775,
-      "sha256": "693951d57b569f2b958aae0943f4be5732fff3cafa25fbfc946e6a87063a3a68"
+      "bytes": 21096,
+      "sha256": "2cfa7cc776fe534a5009736b911b7c9e0ef5727cdb001013018837119c69a6f3"
     },
     {
       "path": "mmsa/analysis/official_logs_check.py",
@@ -405,13 +405,13 @@
     },
     {
       "path": "results/official/official_crossing_mosi_full.json",
-      "bytes": 1591,
-      "sha256": "509fd366c9bac8062db79eaeafa9a974b598ea9101eb247d6a56375f35ce1f84"
+      "bytes": 1600,
+      "sha256": "22a5356065d74691f4c5da2ad0296c7c8b7071cc1a73d9b0883962e5fa2a49e8"
     },
     {
       "path": "results/official/official_crossing_mosi_full.md",
-      "bytes": 548,
-      "sha256": "fdb530522a09625794fd91ec99c0d0b073bd863c6a36382ade3cf40641235173"
+      "bytes": 560,
+      "sha256": "4e0b95a8932ac82441d222b03f7e22210614c628cecd1075caa4045d17651c6b"
     },
     {
       "path": "results/official/qwen25vl_zeroshot_summary.json",
