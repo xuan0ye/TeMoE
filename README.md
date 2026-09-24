@@ -14,6 +14,9 @@ rationale embedding caches.
 - controlled explanation/no-explanation crossings on CMU-MOSI, CH-SIMS, and
   CMU-MOSEI;
 - modality and teacher controls for cached rationales;
+- a five-seed MOSEI transcript-only versus video-plus-transcript source control
+  for TeMoE, LMF, and Late Fusion, with released per-seed MAEs and a data-free
+  equivalence verifier;
 - paired equivalence tests for temporal and routing alternatives;
 - zero-shot Qwen2.5-VL baselines;
 - a matched-boundary latency audit;

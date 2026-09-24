@@ -50,6 +50,10 @@ REQUIRED = {
     "mmsa/models/model.py",
     "mmsa/training/train.py",
     "run_release_audit_gated.sh",
+    "run_mosei_source_control.sh",
+    "mmsa/analysis/mosei_source_control.py",
+    "mmsa/analysis/verify_mosei_source_control.py",
+    "results/mosei/analysis/mosei_source_control.json",
 }
 
 

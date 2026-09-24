@@ -1,0 +1,292 @@
+{
+  "dataset": "mosei",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    42
+  ],
+  "equivalence_margin_mae": 0.06,
+  "equivalence_family": [
+    "temoe",
+    "lmf",
+    "late_fusion"
+  ],
+  "comparison": "Paired test MAE, retraining seeds held fixed; text-only uses same 7B teacher and MiniLM encoder as matched cache.",
+  "architectures": {
+    "temoe": {
+      "paths": {
+        "matched": "outputs/mmsa/mosei/multiseed_interp/temoe/multiseed_temoe.json",
+        "textonly": "outputs/mmsa/mosei/control_textonly/temoe/multiseed_temoe.json",
+        "none": "outputs/mmsa/mosei/multiseed_nointerp/temoe/multiseed_temoe.json"
+      },
+      "per_seed_mae": {
+        "matched": {
+          "42": 0.531625509262085,
+          "1": 0.5229411721229553,
+          "2": 0.5237899422645569,
+          "3": 0.5205485224723816,
+          "4": 0.5195925831794739
+        },
+        "textonly": {
+          "42": 0.5275713801383972,
+          "1": 0.5198856592178345,
+          "2": 0.5173264145851135,
+          "3": 0.5282958745956421,
+          "4": 0.5156278014183044
+        },
+        "none": {
+          "42": 0.5522662401199341,
+          "1": 0.5611423254013062,
+          "2": 0.5499076247215271,
+          "3": 0.5615054965019226,
+          "4": 0.553499162197113
+        }
+      },
+      "mean_mae": {
+        "matched": 0.5236995458602905,
+        "textonly": 0.5217414259910583,
+        "none": 0.5556641697883606
+      },
+      "textonly_minus_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.001958119869232178,
+        "sd": 0.0055704376926751726,
+        "se": 0.0024911754690497535,
+        "margin": 0.06,
+        "lower_test_p": 1.0056753469767088e-05,
+        "upper_test_p": 7.756743127627642e-06,
+        "tost_p": 1.0056753469767088e-05,
+        "ci90": [
+          -0.007268924287101672,
+          0.003352684548637316
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "ci95": [
+          -0.008874731806464177,
+          0.00495849206799982
+        ],
+        "difference_p_two_sided": 0.475804181257629,
+        "holm_adjusted_tost_p": 1.98387637120178e-05,
+        "equivalent_after_holm": true
+      },
+      "none_minus_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.03392274379730224,
+        "sd": 0.006261790653339783,
+        "se": 0.002800357912348115,
+        "margin": 0.06,
+        "lower_test_p": 2.356800869574016e-06,
+        "upper_test_p": 0.00037004610813547737,
+        "tost_p": 0.00037004610813547737,
+        "ci90": [
+          0.027952809781298518,
+          0.03989267781330597
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "ci95": [
+          0.026147703778761418,
+          0.04169778381584307
+        ],
+        "difference_p_two_sided": 0.00026641840811958417
+      }
+    },
+    "lmf": {
+      "paths": {
+        "matched": "outputs/mmsa/mosei/multiseed_interp/lmf/multiseed_lmf.json",
+        "textonly": "outputs/mmsa/mosei/control_textonly/lmf/multiseed_lmf.json",
+        "none": "outputs/mmsa/mosei/multiseed_nointerp/lmf/multiseed_lmf.json"
+      },
+      "per_seed_mae": {
+        "matched": {
+          "42": 0.5218448042869568,
+          "1": 0.5174881219863892,
+          "2": 0.5225764513015747,
+          "3": 0.5170257687568665,
+          "4": 0.5161052346229553
+        },
+        "textonly": {
+          "42": 0.5161071419715881,
+          "1": 0.5229430794715881,
+          "2": 0.5190158486366272,
+          "3": 0.5155510306358337,
+          "4": 0.5215643644332886
+        },
+        "none": {
+          "42": 0.5627937912940979,
+          "1": 0.5752708911895752,
+          "2": 0.5701271891593933,
+          "3": 0.566024899482727,
+          "4": 0.5630138516426086
+        }
+      },
+      "mean_mae": {
+        "matched": 0.5190080761909485,
+        "textonly": 0.5190362930297852,
+        "none": 0.5674461245536804
+      },
+      "textonly_minus_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 2.821683883666992e-05,
+        "sd": 0.0051799660039880515,
+        "se": 0.002316551221211046,
+        "margin": 0.06,
+        "lower_test_p": 6.588211007740874e-06,
+        "upper_test_p": 6.612921237339266e-06,
+        "tost_p": 6.612921237339266e-06,
+        "ci90": [
+          -0.004910315437463168,
+          0.0049667491151365074
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "ci95": [
+          -0.006403560460234704,
+          0.006459994137908043
+        ],
+        "difference_p_two_sided": 0.9908648792941044,
+        "holm_adjusted_tost_p": 1.98387637120178e-05,
+        "equivalent_after_holm": true
+      },
+      "none_minus_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.04840983152389526,
+        "sd": 0.004425062700674865,
+        "se": 0.0019789482006815603,
+        "margin": 0.06,
+        "lower_test_p": 3.323687066680847e-07,
+        "upper_test_p": 0.0021206911282489254,
+        "tost_p": 0.0021206911282489254,
+        "ci90": [
+          0.04419101716196538,
+          0.052628645885825144
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "ci95": [
+          0.04291539047867297,
+          0.053904272569117555
+        ],
+        "difference_p_two_sided": 1.6570353730926968e-05
+      }
+    },
+    "late_fusion": {
+      "paths": {
+        "matched": "outputs/mmsa/mosei/multiseed_interp/late_fusion/multiseed_late_fusion.json",
+        "textonly": "outputs/mmsa/mosei/control_textonly/late_fusion/multiseed_late_fusion.json",
+        "none": "outputs/mmsa/mosei/multiseed_nointerp/late_fusion/multiseed_late_fusion.json"
+      },
+      "per_seed_mae": {
+        "matched": {
+          "42": 0.5178266763687134,
+          "1": 0.5181129574775696,
+          "2": 0.5278974175453186,
+          "3": 0.5171865224838257,
+          "4": 0.511694073677063
+        },
+        "textonly": {
+          "42": 0.5145648121833801,
+          "1": 0.5138369798660278,
+          "2": 0.5192604660987854,
+          "3": 0.5144363045692444,
+          "4": 0.5172774195671082
+        },
+        "none": {
+          "42": 0.5715643167495728,
+          "1": 0.5641533136367798,
+          "2": 0.5656986236572266,
+          "3": 0.5604174733161926,
+          "4": 0.5624685883522034
+        }
+      },
+      "mean_mae": {
+        "matched": 0.5185435295104981,
+        "textonly": 0.5158751964569092,
+        "none": 0.564860463142395
+      },
+      "textonly_minus_matched": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": -0.002668333053588867,
+        "sd": 0.005163770818620143,
+        "se": 0.002309308514132875,
+        "margin": 0.06,
+        "lower_test_p": 7.812460590672643e-06,
+        "upper_test_p": 5.481951447744222e-06,
+        "tost_p": 7.812460590672643e-06,
+        "ci90": [
+          -0.0075914249880798005,
+          0.0022547588809020665
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "ci95": [
+          -0.009080001374044671,
+          0.003743335266866937
+        ],
+        "difference_p_two_sided": 0.31221956863627454,
+        "holm_adjusted_tost_p": 1.98387637120178e-05,
+        "equivalent_after_holm": true
+      },
+      "none_minus_textonly": {
+        "n": 5,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          42
+        ],
+        "difference_first_minus_second": 0.04898526668548584,
+        "sd": 0.004896613538997721,
+        "se": 0.002189832146548944,
+        "margin": 0.06,
+        "lower_test_p": 4.876692770716673e-07,
+        "upper_test_p": 0.0036668897790843257,
+        "tost_p": 0.0036668897790843257,
+        "ci90": [
+          0.04431688006127069,
+          0.05365365330970099
+        ],
+        "equivalent_at_alpha_0p05": true,
+        "ci95": [
+          0.04290531794099525,
+          0.05506521542997643
+        ],
+        "difference_p_two_sided": 2.3646595769477585e-05
+      }
+    }
+  }
+}

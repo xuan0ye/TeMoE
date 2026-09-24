@@ -72,7 +72,35 @@ Inspect each script's environment-variable block before launching. Five-seed
 experiments use seeds 42, 1, 2, 3, and 4. Aggregate claims must be read from
 machine-generated JSON rather than terminal output.
 
-## 5. Release audits
+## 5. MOSEI rationale-source control
+
+The released summary is results/mosei/analysis/mosei_source_control.json.
+It contains the test MAE for each of five paired seeds under no cache,
+Qwen2.5-VL-7B transcript-only rationales, and video-plus-transcript
+rationales for TeMoE, LMF, and Late Fusion. The summary contains no raw
+clips, transcript text, generated rationales, or embedding vectors.
+
+Recompute the declared +/-0.06 MAE and stricter +/-0.01 MAE TOSTs from the
+released JSON without datasets, model weights, or a GPU:
+
+    python -m mmsa.analysis.verify_mosei_source_control --report results/mosei/analysis/mosei_source_control.json
+
+To regenerate the underlying transcript-only cache and train the three
+consumers, obtain the licensed MOSEI data and model weights listed above,
+prepare the matched video-plus-transcript cache, then run on the GPU host:
+
+    MODE=all ARCHS="temoe lmf late_fusion" bash run_mosei_source_control.sh
+
+The script logs fallback behavior and validates finite, shape-matched
+384-dimensional cache arrays before training. It resumes cache generation
+from JSONL checkpoints. The full run is expensive; if all condition runs
+already exist, regenerate only the report with MODE=report and the same
+ARCHS value. The generated JSON and Markdown land under
+outputs/mmsa/mosei/analysis/; only aggregate summaries are published.
+Source equivalence is conditional on the fixed test split, the five seeds,
+and the stated margin. MOSEI clip-only and other consumers were not tested.
+
+## 6. Release audits
 
 Run the smoke gate first:
 
@@ -124,7 +152,7 @@ outputs/mmsa/official/official_crossing_mosi_full.md
 release_audit_results_full.tgz
 ```
 
-## 6. Timing boundaries
+## 7. Timing boundaries
 
 The legacy 1.351 s online measurement includes video read/decode, processor
 preprocessing, host-to-device transfer, Qwen2.5-VL generation, and decoding. It
@@ -141,7 +169,7 @@ synchronization. The online arm additionally performs raw-video rationale
 generation and sentence encoding; the cached arm performs cache lookup. Model
 and dataset loading remain outside both measurements.
 
-## 7. Result validation
+## 8. Result validation
 
 ```bash
 python scripts/release_check.py

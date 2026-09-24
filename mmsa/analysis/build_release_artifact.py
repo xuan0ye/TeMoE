@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT_FILES = (
     "ARTIFACT.md",
     "run_release_audit_gated.sh",
+    "run_mosei_source_control.sh",
     "run_zero_shot_gated.sh",
     "run_raw_transcript_control_gated.sh",
     "run_text_teacher_control_gated.sh",
@@ -37,6 +38,8 @@ RESULT_FILES = (
     "outputs/mmsa/crossing_paired_stats.md",
     "outputs/mmsa/mosei/efficiency/end_to_end.json",
     "outputs/mmsa/mosei/efficiency/end_to_end_v2_full.json",
+    "outputs/mmsa/mosei/analysis/mosei_source_control.json",
+    "outputs/mmsa/mosei/analysis/mosei_source_control.md",
 )
 
 EXCLUDED_NAMES = {"__pycache__", ".pytest_cache"}

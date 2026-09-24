@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "artifact": "TeMoE controlled-study release candidate",
-  "file_count": 102,
+  "file_count": 107,
   "files": [
     {
       "path": ".github/workflows/python-package-conda.yml",
@@ -25,8 +25,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3529,
-      "sha256": "2236cf8d6a2430f9c2f17108040c012f214ed15de2d0118f08e997340b79e1bb"
+      "bytes": 3712,
+      "sha256": "43e95a9c352b7f1dc3a6e962541cfd0e3730115c1d1edc2c61d89a0d7a05042a"
     },
     {
       "path": "RELEASE_POLICY.md",
@@ -35,8 +35,8 @@
     },
     {
       "path": "REPRODUCIBILITY.md",
-      "bytes": 4994,
-      "sha256": "fa5b6f6d1c9480ab0609953ac509f082ad1779333f095b35d91c14dd5c1b2aaf"
+      "bytes": 6499,
+      "sha256": "3aa277972cbe8984d38af6d183d8a794616768a6c0b6796514733afa13de047e"
     },
     {
       "path": "mmsa/__init__.py",
@@ -55,8 +55,8 @@
     },
     {
       "path": "mmsa/analysis/build_release_artifact.py",
-      "bytes": 4733,
-      "sha256": "6d81cc5d0b9a439faef18b7fe1cdd7254e025ff081e3da04f1d20d301927232d"
+      "bytes": 4888,
+      "sha256": "7987602bc12ba6697c4ef22293b8e3bd61f638d6235252acf974bb513159f2de"
     },
     {
       "path": "mmsa/analysis/common.py",
@@ -97,6 +97,11 @@
       "path": "mmsa/analysis/modality_attribution.py",
       "bytes": 6413,
       "sha256": "c91cf4f284c8ea7a60f4b2e1c629b6bf803d75879d4f715312a2524f814ccd69"
+    },
+    {
+      "path": "mmsa/analysis/mosei_source_control.py",
+      "bytes": 4824,
+      "sha256": "b8873658ae5e3838c077599e985a1011b209d98d658143b5063b49cbdbefeda8"
     },
     {
       "path": "mmsa/analysis/official_crossing.py",
@@ -142,6 +147,11 @@
       "path": "mmsa/analysis/text_teacher_control.py",
       "bytes": 4925,
       "sha256": "d9f2440a45b4c6b4816badfa524efbced26ce465f55e1676ba20d95df66a64c4"
+    },
+    {
+      "path": "mmsa/analysis/verify_mosei_source_control.py",
+      "bytes": 4114,
+      "sha256": "38d10a83e3d7492885effddeee61bbc6fdd0958e529246c78e17ea8da1c45911"
     },
     {
       "path": "mmsa/configs/mosei.yaml",
@@ -340,8 +350,8 @@
     },
     {
       "path": "results/RESULTS.md",
-      "bytes": 3899,
-      "sha256": "beb27273555c1ce717db3753f9c8fff4e3f5775560094aa8f745d4a266e81c3a"
+      "bytes": 4817,
+      "sha256": "9ffa6a2275ab4745dd2e1081015a50babb7cc41e4b43ba8d2ba277b9559a2f27"
     },
     {
       "path": "results/condition_audit.json",
@@ -387,6 +397,16 @@
       "path": "results/environment/wjhenv.freeze.txt",
       "bytes": 3042,
       "sha256": "aaec9576b840c01e5ba2a009b1d35d20ce59be8e993db34983f7d64d8c006d6e"
+    },
+    {
+      "path": "results/mosei/analysis/mosei_source_control.json",
+      "bytes": 8303,
+      "sha256": "e1382e85b0581ce4b572f0c986070c6f1aff4d4bf80913472590f61ccda555f8"
+    },
+    {
+      "path": "results/mosei/analysis/mosei_source_control.md",
+      "bytes": 1214,
+      "sha256": "ee34fdf3bf1775862e7253803650a6860b798294fd0e853b1d679fc17b3d7998"
     },
     {
       "path": "results/official/control_caches.json",
@@ -479,6 +499,11 @@
       "sha256": "316ec267656e57ae3791dcf53c5856faaddef6ae35fe01400bba02356ddd2d6e"
     },
     {
+      "path": "run_mosei_source_control.sh",
+      "bytes": 3662,
+      "sha256": "3154891ad2af12fdec839d9bcbb02d7ad5b5767020515ae6d47ff34e2759ba59"
+    },
+    {
       "path": "run_mosei_suite.sh",
       "bytes": 6388,
       "sha256": "a7d59868442b48844283f97799b4021f519920e4948a983b554f645b656fb76f"
@@ -510,8 +535,8 @@
     },
     {
       "path": "scripts/release_check.py",
-      "bytes": 8308,
-      "sha256": "8e9debc52f02fd184c31144d9de94eff0a9c979010dca2c6caa94c5f2592ba6d"
+      "bytes": 8496,
+      "sha256": "bb4d70e892e320e51740230c7d43644f97840052fad95678c58af1cb7297e039"
     }
   ],
   "excluded_categories": [

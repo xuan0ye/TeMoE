@@ -33,6 +33,23 @@ this pipeline and are not claimed to reproduce the original papers exactly.
 - `official/equivalence_tests.{json,md}` records paired TOSTs, margins,
   confidence intervals, and Holm-adjusted decisions.
 
+## MOSEI transcript-only rationale source control
+
+results/mosei/analysis/mosei_source_control.json retains five paired test MAEs
+per condition and consumer for TeMoE, LMF, and Late Fusion. The companion
+Markdown displays mean MAEs, paired differences, 90%/95% CIs, and
+within-family Holm-adjusted TOSTs. Transcript-only minus
+video-plus-transcript mean differences are -0.001958, +0.000028, and
+-0.002668 MAE respectively. All three pass the declared +/-0.06 margin
+(maximum Holm p=1.984e-5) and a stricter +/-0.01 sensitivity check
+(maximum Holm p=0.03203). The no-cache means are 0.5557, 0.5674,
+and 0.5649. Recompute the two margin families with:
+
+    python -m mmsa.analysis.verify_mosei_source_control --report results/mosei/analysis/mosei_source_control.json
+
+This source comparison covers only these three MOSEI consumers on the fixed
+test split; the released report does not claim a MOSEI clip-only control.
+
 ## Zero-shot and official-code baselines
 
 - `official/qwen25vl_zeroshot_summary.json`: direct-score Qwen2.5-VL results on
